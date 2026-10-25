@@ -1,0 +1,12 @@
+session,patient,cohort,k2_locking_c_mean,decode_trial_median_r
+pat01_sess04,P1,post_operative,0.408507,0.358072
+pat01_sess05,P1,post_operative,0.529521,0.612632
+pat01_sess06,P1,post_operative,0.525683,0.492296
+pat01_sess07,P1,post_operative,0.396512,0.188791
+pat01_sess08,P1,post_operative,0.455867,0.556429
+pat01_sess09,P1,post_operative,0.436904,0.500028
+pat02_sess03,P2,post_operative,0.563002,0.708792
+pat02_sess05,P2,post_operative,0.526800,0.585198
+pat02_sess06,P2,post_operative,0.512948,0.599524
+pat02_sess08,P2,post_operative,0.515047,0.496522
+pat02_sess09,P2,post_operative,0.511136,0.538915

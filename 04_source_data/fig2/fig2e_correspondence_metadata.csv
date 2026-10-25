@@ -1,0 +1,13 @@
+field,value
+panel,Fig. 2 panel i - reference x decoded joint correspondence matrices (reference / decoded from imagined walking / decoded from resting EEG)
+build_id,main
+build_id_note,"main (healthy cohort, causal complex-demodulation decoder; BOTH conditions)"
+iw_source,data/decoder_output/main/cross_cohort_main_IW.npz <- h_iw_dump
+rest_source,data/decoder_output/main/cross_cohort_main_REST.npz <- h_rest_testonly_dump
+n_sessions_matrix,72 of 80 (sessions with all six joints recorded)
+reporting_format,median [IQR]; p in APA style (exact values in parentheses)
+iw_diag_median_iqr,"0.4101 [0.2374, 0.5346]"
+rest_diag_median_iqr,"0.0053 [-0.0179, 0.0486]"
+paired_drop,"72/72 sessions, Wilcoxon signed-rank W = 0, p < .001 (exact 1.66e-13)"
+display_polarity,"RHipW X,LKneW X,LAnkW X x(-1) via 03_figures/project_goni.py; display-only"
+rpt_calib_scope_note,"the 80/80-session accuracy drop (IW session-mean rpt_calib 0.4037 -> REST 0.0111, W = 0, p < .001, exact 7.85e-15) is the DECODER metric over all 80 sessions (per-joint, no all-six-joint requirement; random 10-fold CV folds) "

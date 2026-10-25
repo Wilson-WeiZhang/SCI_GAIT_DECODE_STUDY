@@ -1,0 +1,54 @@
+key,value
+figure,"Fig. 6 panel a - patient harmonic gait-phase scalp maps, split by patient; rows k1/k2/k3 x 8 gait-cycle phase points, one PNG per patient"
+build_id,main
+harmonic_dump,diag_patient_harmonic_phase
+scope,"n=2 SCI patients, case-level, descriptive; 11 post-operative sessions drawn per patient (P1=6 sess, P2=5 sess) + pooled"
+post_operative_set,pat01 sess04-09 + pat02 sess03/05/06/08/09 (11 sessions) - PLOTTED
+pre_operative_set,"pat01 sess01/02 + pat02 sess01/02 (4 sessions) - present in the dump, NOT plotted here"
+cohort_selection,"EXPLICIT session lists, not an id-prefix match"
+n_sessions_total,11
+sessions,pat01_sess04;pat01_sess05;pat01_sess06;pat01_sess07;pat01_sess08;pat01_sess09;pat02_sess03;pat02_sess05;pat02_sess06;pat02_sess08;pat02_sess09
+split,P1=pat01 sess04-09; P2=pat02 sess03/05/06/08/09; P_all=pooled post_operative
+harmonics,1;2;3
+main_panel_harmonics,1;2;3
+main_panel_layout,"per patient: 3 rows (k1/k2/k3) x 8 gait-cycle phase columns; row labels drawn, no panel letter, no title"
+si_harmonics,1;2;3
+colour_scale,"ONE reference phase + ONE symmetric colour limit shared across BOTH patients AND all three harmonics, computed from the pooled post_operative group mean over channels x cycle points x harmonics. Not per-row, not per-patient."
+trial_dump,diag_pertrial_phasemap_post_operative
+shared_reference_phase_and_clim_across_main_and_si,true (both rendered in one run)
+n_channels,60
+n_cycle_points,8
+cycle_points_plotted,0.000;0.125;0.250;0.375;0.500;0.625;0.750;0.875
+wrap_column_removed,"cycle_fraction 1.000 is the wrap of 0.000; verified in this run max|diff| = 0.000e+00 over 3240 session x channel x harmonic cells; the Source Data and the statistics hold the 8 unique points; panel a (fig6_patient_harmonic_phase_panel.png) draws 9 columns, the last (1.000) redrawing the 0.000 map and its significance mask"
+reference_phase_rad,0.808285
+shared_clim_abs,0.156935
+montage_source,"electrode positions read from the project EEGLAB donor .set (data/prep_data/healthy/eeg/SUB_37_sess02_step2.set), sphere='eeglab'; NOT mne make_standard_montage"
+claim,"channel-space diagnostic, not source localization: gait-cycle-organised phase structure is present in EACH patient's imagined-walking EEG; no claim about cortical generators or causal neural contribution"
+output_png_main,"figures_out/fig6/fig6_patient_harmonic_phase{,_P1,_P2}.png"
+P_all_mean_abs_k1,0.076341
+P_all_n_sig_bh_k1,"126 of 480 channel x cycle-point cells (DRAWN: trial-level LME, Wald z, BH-FDR per harmonic row)"
+P_all_mean_abs_k2,0.094401
+P_all_n_sig_bh_k2,"72 of 480 channel x cycle-point cells (DRAWN: trial-level LME, Wald z, BH-FDR per harmonic row)"
+P_all_mean_abs_k3,0.034152
+P_all_n_sig_bh_k3,"41 of 480 channel x cycle-point cells (DRAWN: trial-level LME, Wald z, BH-FDR per harmonic row)"
+P_all_n_trials,449
+P_all_n_sessions,11
+P_all_sessions,pat01_sess04;pat01_sess05;pat01_sess06;pat01_sess07;pat01_sess08;pat01_sess09;pat02_sess03;pat02_sess05;pat02_sess06;pat02_sess08;pat02_sess09
+P1_mean_abs_k1,0.089904
+P1_n_sig_bh_k1,"120 of 480 channel x cycle-point cells (DRAWN: trial-level LME, Wald z, BH-FDR per harmonic row)"
+P1_mean_abs_k2,0.082607
+P1_n_sig_bh_k2,"21 of 480 channel x cycle-point cells (DRAWN: trial-level LME, Wald z, BH-FDR per harmonic row)"
+P1_mean_abs_k3,0.042512
+P1_n_sig_bh_k3,"45 of 480 channel x cycle-point cells (DRAWN: trial-level LME, Wald z, BH-FDR per harmonic row)"
+P1_n_trials,240
+P1_n_sessions,6
+P1_sessions,pat01_sess04;pat01_sess05;pat01_sess06;pat01_sess07;pat01_sess08;pat01_sess09
+P2_mean_abs_k1,0.101753
+P2_n_sig_bh_k1,"109 of 480 channel x cycle-point cells (DRAWN: trial-level LME, Wald z, BH-FDR per harmonic row)"
+P2_mean_abs_k2,0.184556
+P2_n_sig_bh_k2,"261 of 480 channel x cycle-point cells (DRAWN: trial-level LME, Wald z, BH-FDR per harmonic row)"
+P2_mean_abs_k3,0.033036
+P2_n_sig_bh_k3,"0 of 480 channel x cycle-point cells (DRAWN: trial-level LME, Wald z, BH-FDR per harmonic row)"
+P2_n_trials,209
+P2_n_sessions,5
+P2_sessions,pat02_sess03;pat02_sess05;pat02_sess06;pat02_sess08;pat02_sess09

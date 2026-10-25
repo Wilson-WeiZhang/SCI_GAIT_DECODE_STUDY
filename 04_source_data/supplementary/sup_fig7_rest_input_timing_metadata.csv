@@ -1,0 +1,12 @@
+key,value
+script,03_figures/sup_fig7_rest_input_timing.py
+build_id,main
+cohort,"post_operative; simulation trials with a resting-input decoder output; 2 patients, case-level"
+input_rollouts,sup_fig7_sim_per_patient_gate3s_source_data.csv (not distributed)
+input_dump_imagined_walking,data/decoder_output/main/pat_post_operative_iw
+input_dump_resting_input,data/decoder_output/main/pat_rest_testonly
+input_resting_rollouts,02_decoding/simulation/simulation_rollouts_gate3s/main_restprobe/stats/f7r_per_trial_common.csv
+window,3.0 s after the onset of the final decoder output
+leading_leg,"sign of zL_hip + zR_hip (raw channels, z-scored within the window); chance agreement 0.5"
+level,"decoder output (the drive of the simulation), not the simulated biped"
+paper_location,"Main Fig. 7 Results (one sentence); Supplementary Note 7, Resting input"

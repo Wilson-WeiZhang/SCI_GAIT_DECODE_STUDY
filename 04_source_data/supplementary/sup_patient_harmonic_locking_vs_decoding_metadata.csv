@@ -1,0 +1,9 @@
+key,value
+analysis,patient post-operative session-level gait-phase locking |c| at k1 / k2 / k3 vs decoding accuracy
+build_id,main
+cohort,"post_operative (11 post-operative sessions, 2 patients; case-level)"
+y_metric,"session trial-median decoding r, fig5b_session_box_source_data.csv cohort post_operative"
+statistics,"LME y ~ x, patient random intercept, REML (headline as in Fig. 6g); Pearson r with exact within-patient permutation p (86,400 relabellings)"
+guard,k2 row reproduces Fig. 6g LME slope 2.115588 and s.e. 0.451658 within 5e-5
+script,03_figures/sup_patient_harmonic_locking_vs_decoding.py (reuses 03_figures/fig6_locking_vs_transfer.py loaders)
+paper_location,"Supplementary Note 6, sentence after the Fig. 6g association: k1 row quoted (slope +1.52, s.e. 1.68, p = 0.366)"

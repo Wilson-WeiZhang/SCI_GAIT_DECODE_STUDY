@@ -1,0 +1,26 @@
+key,value
+figure,"Fig.5 — per-session SCI-patient imagined-walking decoding, pre- and post-operative"
+build_id,main
+decode_tag,main
+basis,"all-80-healthy pooled shared PCA30 on causal complex-demodulation features (basis_hglobal_cdm_pca30), built on the causal triples"
+readout,"patient-trained 10-fold CV (representation transfer, not zero-shot)"
+scope,"n=2 SCI patients, case-level, descriptive; per-session margin +/- bootstrap CI, NO p-value, no population claim"
+metric,"rpt_calib, All = mean over the 6 Walker-X joints, per session (10 CV folds x 6 joints)"
+post_operative_set,pat01 sess04-09 + pat02 sess03/05/06/08/09 (11 sessions)
+pre_operative_set,pat01 sess01/02 + pat02 sess01/02 (4 sessions)
+post_operative_mean_r,0.459923
+pre_operative_mean_r,0.304632
+median_margin_post_operative,0.452952
+median_margin_pre_operative,0.320346
+n_ci_excludes_zero_post_operative,11/11
+n_ci_excludes_zero_pre_operative,2/4
+post_operative_mean_r_P1,0.397027
+post_operative_mean_r_P2,0.535397
+healthy_rest_band,"grey background band = healthy rest-input null, panel All (combined), convention session_mean: 2.5-97.5 pct of the 80 healthy session values = [-0.078009, 0.109183], center 0.006946"
+patient_marker_convention,"P1 = circle, P2 = square (same shape convention as fig6_rsa_quantification_forest.py); fill still encodes the CI criterion"
+margin_def,"r_all - floor; floor = max(zero_eeg, circshift) null"
+marker_semantics,DATA-DRIVEN from ci_excludes_zero: filled blue #0072B2 = CI excludes the no-EEG floor; open grey #9aa0a6 = CI includes it. 
+input_post_operative_csv,data/decoder_output/main/pat_margin_ci.csv
+input_pre_operative_csv,data/decoder_output/main/pat_margin_ci.csv
+upstream_decode,"02_decoding/pyport on the causal patient triples, every fold decoded from the export of its band table (02_decoding/run/make_job_lists.py, 02_decoding/run/merge_runs.py) -> result/main/pat_{post_operative,pre_operative}_iw/"
+output_png,figures_out/fig5/main/fig5a_patient_decode_margin.png

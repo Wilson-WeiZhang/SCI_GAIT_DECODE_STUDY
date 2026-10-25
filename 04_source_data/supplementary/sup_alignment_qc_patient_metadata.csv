@@ -1,0 +1,19 @@
+key,value
+build_id,pre_operative
+build_id_note,patient preprocessing (no decoder; per-session alignment QC). The tokens name the two patient cohorts the QC covers.
+cohort,pre_operative + post_operative (15 retained patient sessions)
+sessions_included,pat01_sess01;pat01_sess02;pat02_sess01;pat02_sess02;pat01_sess04;pat01_sess05;pat01_sess06;pat01_sess07;pat01_sess08;pat01_sess09;pat02_sess03;pat02_sess05;pat02_sess06;pat02_sess08;pat02_sess09
+n_sessions_included,15
+sessions_plotted,pat01_sess04;pat01_sess05;pat01_sess06;pat02_sess01;pat02_sess02;pat02_sess03;pat02_sess05;pat02_sess06;pat02_sess08;pat02_sess09;pat01_sess07;pat01_sess08;pat01_sess09
+n_sessions_plotted,13
+sessions_multi_goni_file,pat01_sess07;pat01_sess08;pat01_sess09
+sessions_excluded_by_cohort,pat01_sess03(recording hardware failure);pat02_sess04(recording hardware failure);pat02_sess07(recording hardware failure)
+sessions_missing_input,none
+single_goni_median_abs_residual_ms,5.25
+single_goni_worst_max_ms,39.00
+multi_goni_deoffset_median_ms,6.00
+multi_goni_worst_max_ms,40.00
+inputs,01_preprocessing/patient/result/qc/align_log/;01_preprocessing/patient/result/qc_connector_fix/align_log/;01_preprocessing/patient/result/qc_two_marker/align_log/
+renderer,03_figures/sup_alignment_qc_patient.py
+output_png,supplementary/sup_alignment_qc_patient.png
+paper_location,"Supplementary Note 11, text only (patient synchronization sentence; no Supplementary figure panel)"

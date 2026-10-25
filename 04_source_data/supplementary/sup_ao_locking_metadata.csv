@@ -1,0 +1,26 @@
+key,value
+paper_location,"Supplementary Fig. 11 panels c and d; Main text Results (one sentence: six-participant cohort test, cycle-label permutation pFDR); Supplementary Note 2 (paired t as companion; per-participant breakdown of c; one sentence on the k2 map similarity of d: group-vs-group values, AO above its null in every participant, paired difference not statistically significant); panel files supplementary/_panels/S11c_ao_locking.png and supplementary/_panels/S11d_ao_similarity.png"
+build_id,main
+build_id_note,"neural analysis (zero-phase preprocessing, the Fig. 3 |c| routine dump_harmonic_phase_maps); independent of the decoder"
+cohort,"six participants of the supplementary experiment: SUB_01_sess05, SUB_09_sess03, SUB_12_sess03, SUB_23_sess03, SUB_29_sess03, SUB_35_sess03"
+renderer,03_figures/sup_ao_locking.py
+metric,"|c| = mean over 60 channels x 9 gait-cycle points of |phase_mod| at the walker hip phase (LHipW X), lag 0; 30 trials per condition in every session"
+rest_null,"per-condition yoked-REST null (dump_persession_rest_null), 200 draws; above_rest_p95 = |c| > p95"
+correction,"Benjamini-Hochberg FDR across k1 / k2 / k3, separately for each test and sidedness (pFDR); raw p kept"
+test_cohort_companion,"paired t over the six participant differences MI+AO - AO, two-sided, same input; companion only, no significance claim rests on it"
+k2_mean_delta,0.055340
+k2_perm_p_one_sided,9.9995e-05
+k2_perm_pfdr_one_sided,0.000149993
+k2_paired_t5,2.831787
+k2_paired_t_p_two_sided,0.036598
+k2_paired_t_pfdr_two_sided,0.054897
+scope,"case level: one session per participant, n = 6, experimenter-supplied cycle labels; both conditions with the walker visible and audible"
+d_metric,"Fig. 6 similarity: |sum P conj(H)| / (||P|| ||H||) over 60 channels x 9 gait-cycle points of the complex harmonic phase map (invariant to a global phase), code copied from Fig. 6"
+d_reference,healthy cohort imagined-walking map without the participant's own sessions (leave-participant-out; 78 sessions for each of the six; each of the six is a healthy cohort participant); full-80 values kept as similarity_full80
+d_healthy_percentile,"percent of the 80 healthy sessions' own leave-participant-out similarities (Fig. 6c healthy_lpo, full precision) below the value"
+d_pfdr,"k1 t(5) = 1.375853, p 0.227301, pFDR 0.227301, mean delta +0.186185, 4 / 6 positive; k2 t(5) = 1.859337, p 0.122075, pFDR 0.183112, mean delta +0.105117, 5 / 6 positive; k3 t(5) = 2.577453, p 0.049585, pFDR 0.148755, mean delta +0.268085, 5 / 6 positive"
+d_k2_group_map,"six-session group map vs the healthy map of the sessions of the other 36 participants (n = 68): MI+AO 0.859139 (shuffle p95 0.243037), AO 0.843721 (shuffle p95 0.264771); AO group vs MI+AO group 0.827848"
+d_k2_ao_above_null,6 / 6 participants' AO k2 maps above their own shuffle p95
+d_panel_mark,"points all filled; values inside their own null (shuffle p >= 0.05): SUB_09 k3 AO, SUB_12 k1 AO, SUB_12 k3 AO"
+d_scope,"case level, n = 6; both conditions with the walker visible and audible"
+canvas,"16 cm SI contract (03_figures/si_panel_style.py), half tier, 600 dpi; legend as sidecar PNG"

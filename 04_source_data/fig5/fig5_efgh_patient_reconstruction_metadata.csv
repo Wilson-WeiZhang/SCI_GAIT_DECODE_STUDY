@@ -1,0 +1,23 @@
+field,value
+figure,Fig. 5 e-h
+panels,e recon fidelity; f spectral fidelity; g cyclograms; h correspondence
+build_id,main
+cohort,post_operative
+decode_tag,main
+n_sessions_cohort,11
+n_participants,2
+sessions,pat01_sess04 pat01_sess05 pat01_sess06 pat01_sess07 pat01_sess08 pat01_sess09 pat02_sess03 pat02_sess05 pat02_sess06 pat02_sess08 pat02_sess09
+scope_label,"case-level (2 participants, post-operative); descriptive, no population claim"
+renderer,03_figures/fig5_efgh_patient_reconstruction.py
+input_e_g,data/decoder_output/main/abd_cohort_pat_post_operative.npz
+input_f,data/decoder_output/main/spectra_pat_post_operative.npz
+input_h_iw,data/decoder_output/main/cross_cohort_pat_post_operative_IW.npz
+input_h_rest,data/decoder_output/main/cross_cohort_pat_rest_testonly.npz
+n_e_LHip,11
+n_e_LKne,9
+n_e_LAnk,11
+n_h_IW,9
+n_h_REST,7
+display_polarity,"applied at render time from 03_figures/project_goni.py (RHipW X, LKneW X, LAnkW X x -1); panel h only, diagonal unaffected"
+colors,"03_figures/project_palette.py: TARGET_GONI reference, HIP/KNEE/ANKLE decoded, PHASE_CMAP twilight gait-cycle phase, DIFF_CMAP RdBu_r correspondence"
+units,e/g normalized (per-cycle z-scored before averaging); f normalized power vs cadence-relative frequency; h Pearson r

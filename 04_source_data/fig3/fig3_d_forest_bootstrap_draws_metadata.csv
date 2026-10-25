@@ -1,0 +1,18 @@
+key,value
+build_id,main
+cohort,main healthy cohort
+unit_of_analysis,session
+n_sessions,80
+resampling,"session-level bootstrap with replacement, np.random.default_rng(0)"
+n_draws_in_file,1000
+n_draws_behind_published_CI,1000
+published_CI_source,04_source_data/fig3/fig3_d_forest_stats.csv (ci_lo/ci_hi)
+generator,03_figures/fig3_d_forest_bootstrap_draws.py
+k1_taskevoked_ci_published,"0.722689,0.897354"
+k1_taskevoked_ci_exported1000,"0.722689,0.897354"
+k2_taskevoked_ci_published,"0.031474,0.400689"
+k2_taskevoked_ci_exported1000,"0.031474,0.400689"
+k3_taskevoked_ci_published,"0.036593,0.453847"
+k3_taskevoked_ci_exported1000,"0.036593,0.453847"
+mubeta_erd_ci_published,"-0.082936,0.344783"
+mubeta_erd_ci_exported1000,"-0.082936,0.344783"

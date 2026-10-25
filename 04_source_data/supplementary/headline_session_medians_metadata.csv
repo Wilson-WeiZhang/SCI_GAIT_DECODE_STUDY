@@ -1,0 +1,11 @@
+key,value
+paper_location,"Abstract; Results (Fig. 2c, Fig. 4b and Fig. 5b sentences); Discussion; Supplementary Note 1, Supplementary Note 6 and Supplementary Video 1 legend"
+build_id,main
+statistic,"median over SESSIONS of each session's median trial r (per trial: mean over the joints of the group, model calib); q25 / q75 / min / max over sessions, linear quantile"
+healthy_iw_source,04_source_data/fig2/fig2g_trial_r_long.csv
+healthy_rw_source,data/decoder_output/main/h_rw_trial_r_long.csv
+healthy_rest_source,data/decoder_output/main/h_rest_testonly_trial_r_long.csv
+patient_iw_source,"04_source_data/fig5/fig5b_trial_matrix.csv (columns 'P? post ?' = post_operative, 'P? pre ?' = pre_operative)"
+patient_rest_source,data/decoder_output/main/pat_rest_testonly/*_trial_r.csv (8 of the 11 post-operative sessions)
+scope,"descriptive; healthy full cohort 80 sessions / 42 participants; patients n = 2, case-level"
+producer,03_figures/headline_session_medians.py

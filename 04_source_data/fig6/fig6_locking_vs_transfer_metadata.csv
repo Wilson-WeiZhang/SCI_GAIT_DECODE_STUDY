@@ -1,0 +1,31 @@
+key,value
+analysis,"per-session k2 gait-phase-locking |c| vs transfer decoding trial-median r, 11 post-operative sessions / 2 SCI patients"
+build_id,main
+cohort,post_operative
+x_metric,session-mean c_mi at harmonic_k == 2 over that session's imagined-walking trials (gait-phase-locking magnitude |c|)
+y_metric,transfer decoding trial-median r (all-80-healthy pooled shared PCA30 basis + patient-trained 10-fold-CV readout)
+x_source,data/decoder_output/patient_pertrial_c.csv  + data/decoder_output/patient_pertrial_c_sess08.csv + data/decoder_output/patient_pertrial_c_sess09.csv
+y_source,"04_source_data/fig5/fig5b_session_box_source_data.csv, column `median`, cohort == post_operative"
+n_sessions,11
+n_patients,2
+lme_slope_patient_random_intercept,2.115588
+lme_slope_se,0.451658
+lme_slope_wald_p,0.000003
+lme_model,"statsmodels MixedLM y ~ x, groups = patient (random intercept), REML; descriptive"
+lme_drawn_line,"fixed-effect (population) line: intercept = the mean of the two patient random intercepts (statsmodels `Intercept`), slope = the fixed-effect slope above; band = 95% CI of that fixed-effects mean line, var(y_hat) = x' V x with V the (Intercept, x) block of lme.cov_params(), normal quantile 1.96 (statsmodels reports Wald z for MixedLM). Same construction as the sibling panel's fit."
+pearson_r,0.838678
+pearson_p,0.001255
+spearman_rho,0.736364
+spearman_p,0.009760
+ols_patient_adjusted_slope,2.183887
+ols_patient_adjusted_slope_p,0.008194
+ols_patient_adjusted_model,y ~ x + C(patient)
+loo_pearson_r_range,0.773867 to 0.882412
+loo_pearson_p_range,0.000724 to 0.008619
+loo_pearson_per_session,pat01_sess04 r=0.8119 P=0.0043; pat01_sess05 r=0.8288 P=0.0030; pat01_sess06 r=0.8713 P=0.0010; pat01_sess07 r=0.7739 P=0.0086; pat01_sess08 r=0.8824 P=0.0007; pat01_sess09 r=0.8741 P=0.0009; pat02_sess03 r=0.7969 P=0.0058; pat02_sess05 r=0.8333 P=0.0027; pat02_sess06 r=0.8357 P=0.0026; pat02_sess08 r=0.8555 P=0.0016; pat02_sess09 r=0.8393 P=0.0024
+perm_within_patient_p,0.003808
+perm_within_patient_scheme,"EXACT label permutation of y across sessions WITHIN each patient (6! x 5! = 86400), two-sided on |Pearson r| >= |observed|; holds the between-patient offset fixed"
+per_patient_spearman,P1 rho=0.8286 P=0.0416 n=6; P2 rho=0.5000 P=0.3910 n=5
+scope,"n = 2 SCI patients, 11 post_operative sessions, case-level, post-operative, DESCRIPTIVE; NOT a population claim"
+paper_location,Fig. 6 panel g
+source_script,03_figures/fig6_locking_vs_transfer.py

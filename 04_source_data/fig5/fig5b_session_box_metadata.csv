@@ -1,0 +1,21 @@
+key,value
+figure,"Fig.5b - per-session patient imagined-walking decoding, Fig.2c-style boxes"
+build_id,main
+decode_tag,main
+decode_run,"02_decoding/pyport on the causal patient triples, every fold decoded from the export of its band table (02_decoding/run/make_job_lists.py, 02_decoding/run/merge_runs.py)"
+basis,"all-80-healthy pooled shared PCA30 on causal complex-demodulation features (basis_hglobal_cdm_pca30), built on the causal triples"
+readout,"patient-trained 10-fold CV (representation transfer, not zero-shot)"
+scope,"n=2 SCI patients, case-level, descriptive; no population claim, no pre/post test"
+metric,"rpt_r, model=calib, All = mean of the 6 Walker-X joints, one value per held-out trial"
+plot_statistic,box = median + IQR; whiskers = 10th-90th percentile (identical to Fig.2c)
+cohort,pre_operative + post_operative (P1 6 + P2 5 post-operative sessions)
+pre_operative_set,pat01 sess01/02 + pat02 sess01/02 (4 sessions)
+n_trials_total,359
+n_sessions,15
+column_order,"P1 pre -> P1 post -> P2 pre -> P2 post, by session number; NOT ranked by performance"
+rest_band_convention,"session_median (Fig.2c's row) - NOT session_mean. The box is centred on the session median, so the null must be the median-convention band."
+rest_band_all,"[-0.197731, 0.194859], centre 0.014641"
+rest_band_semantics,"NULL reference (the decoder fed resting EEG), NOT a healthy performance benchmark. No cross-cohort performance comparison is drawn or claimed."
+n_session_medians_above_band,13/15 all sessions; 10/11 post-operative
+output_csv,fig5b_session_box_source_data.csv; fig5b_trial_matrix.csv
+rendered_by,"03_figures/fig5b_session_box.py -> figures_out/fig5/fig5b_session_box.png; the same CSVs are the Prism inputs, as for Fig.2c"

@@ -1,0 +1,16 @@
+key,value
+panel,"Fig. 3 panels b and g - gait-phase locking topographies (b: cohort, k1-k3 x 9 gait-cycle points; g: responder and non-responder sessions, k1-k3 x 5 gait-cycle points)"
+build_id,main
+producer,03_figures/fig3_export_for_eeglab.py
+input_maps,data/decoder_output/diag_harmonic_phase_responder_split/persession_harmonic_phase_cycle9_complex.csv
+input_split,04_source_data/fig3/fig3_def_resnonres_source_data.csv
+n_cohort,80
+n_responder,55
+n_non_responder,25
+n_channels,60
+col_map,"cohort (all sessions, Fig. 3b), responder or non_responder (Fig. 3g)"
+col_harmonic_k,"gait harmonic k (1 = stride frequency, 2 = step frequency, 3 = third harmonic)"
+col_cycle_fraction,gait-cycle phase point (fraction of the cycle)
+col_channel,EEG channel label
+col_value,signed phase modulation: real part of the group-mean complex harmonic phase map projected on the common cohort reference phase (one shared colour scale)
+col_significant,"1 = filled dot: one-sample t test across the group's sessions that the signed value differs from 0, BH-FDR alpha 0.05 across channels and the nine phase points within each harmonic"

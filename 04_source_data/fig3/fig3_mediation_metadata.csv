@@ -1,0 +1,13 @@
+key,value
+figure,Fig. 3 panel j - statistical mediation: volitional imagery control (Q6) acts on decoding THROUGH task-evoked gait-phase locking (k1)
+producer,03_figures/fig3_mediation.py
+build_id,main
+cohort,healthy cohort (tag main): 80 sessions / 42 participants
+input,04_source_data/fig3/fig3_master_source_data.csv
+input_producer,03_figures/fig3_build_master.py
+n_cohort_sessions,80
+n_analysed,76
+standardisation,"X, M, Y z-scored (pandas std, ddof=1) before every OLS"
+bootstrap_p,"two-sided percentile bootstrap p = 2*min(P(a*b<=0), P(a*b>=0)); reported as p < 1/B when no resample crosses zero"
+library_versions,python 3.13.7; numpy 2.3.4; scipy 1.16.3; pandas 2.3.3; matplotlib 3.10.7; statsmodels 0.14.6
+outputs,figures_out/fig3/main/fig3_mediation.png; 04_source_data/fig3/fig3_mediation_source_data.csv

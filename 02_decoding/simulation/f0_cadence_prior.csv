@@ -1,0 +1,12 @@
+session,f0_prior_hz,source
+pat01_sess04,0.8628127696289905,"257 trials of pat01_sess01, pat01_sess02, pat01_sess05, pat01_sess06, pat01_sess07, pat01_sess08, pat01_sess09"
+pat01_sess05,0.8795074758135444,"241 trials of pat01_sess01, pat01_sess02, pat01_sess04, pat01_sess06, pat01_sess07, pat01_sess08, pat01_sess09"
+pat01_sess06,0.859106529209622,"239 trials of pat01_sess01, pat01_sess02, pat01_sess04, pat01_sess05, pat01_sess07, pat01_sess08, pat01_sess09"
+pat01_sess07,0.8620689655172414,"243 trials of pat01_sess01, pat01_sess02, pat01_sess04, pat01_sess05, pat01_sess06, pat01_sess08, pat01_sess09"
+pat01_sess08,0.8654263844575263,"284 trials of pat01_sess01, pat01_sess02, pat01_sess04, pat01_sess05, pat01_sess06, pat01_sess07, pat01_sess09"
+pat01_sess09,0.8748913083413958,"242 trials of pat01_sess01, pat01_sess02, pat01_sess04, pat01_sess05, pat01_sess06, pat01_sess07, pat01_sess08"
+pat02_sess03,0.8620689655172414,"233 trials of pat02_sess01, pat02_sess02, pat02_sess05, pat02_sess06, pat02_sess08, pat02_sess09"
+pat02_sess05,0.8648026086176122,"248 trials of pat02_sess01, pat02_sess02, pat02_sess03, pat02_sess06, pat02_sess08, pat02_sess09"
+pat02_sess06,0.8539709649871904,"235 trials of pat02_sess01, pat02_sess02, pat02_sess03, pat02_sess05, pat02_sess08, pat02_sess09"
+pat02_sess08,0.8529997846278621,"230 trials of pat02_sess01, pat02_sess02, pat02_sess03, pat02_sess05, pat02_sess06, pat02_sess09"
+pat02_sess09,0.8554319931565441,"230 trials of pat02_sess01, pat02_sess02, pat02_sess03, pat02_sess05, pat02_sess06, pat02_sess08"

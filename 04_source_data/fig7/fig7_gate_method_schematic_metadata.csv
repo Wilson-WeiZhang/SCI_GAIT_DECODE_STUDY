@@ -1,0 +1,24 @@
+key,value
+figure,"Supplementary Fig. 1e (gate method schematic; panel file supplementary/_panels/S1d_gate_method_schematic.png) -> figures_out/fig7/fig7_gate_method_schematic.png. SCHEMATIC: no measured or plotted data, therefore no *_source_data.csv. Every box is a transcription of a constant or step of the gate pipeline."
+build_id,post_operative
+colours,"greys only (project_palette INK/MID/PALE); terminals use the condition code WALK = IW #8C8C8C, STOP = REST white with REST_EDGE. No decorative colour."
+sampling_rate_hz,250 — gate_features.py (FS_EXPECT)
+n_channels,60 (59 brain + restored FCz) — the patient prep root's step3-clean _eeg.mat; gate_features.py
+bands_hz,"delta 0.5-4, theta 4-8, mu 8-13, beta 13-30 — gate_features.py (BANDS); condition B filters them with a 4th-order Butterworth, gate_fusion.py"
+classifierA_features,"240 = 60 ch x 4 bands, Welch band power — gate_features.py"
+classifierA_correction,"log10(P / P_rest), P_rest = median band power of the calibration-rest windows — gate_fusion.py"
+classifierA_model,"LDA(solver='lsqr', shrinkage='auto') (Ledoit-Wolf) — gate_fusion.py"
+classifierB_covariance,per-band 60 x 60 channel covariance of the filtered window — gate_fusion.py
+classifierB_shrinkage,"trace-normalised, lambda = 1e-3 — gate_fusion.py (LAM_RA, shrink)"
+classifierB_alignment,whiten by R^-1/2 with R = Karcher (AIRM) mean of the session's calibration-rest covariances — gate_fusion.py (whiteners, ra_feat)
+classifierB_calibration_length_s,>= 30 — gate_fusion.py (BASE_MIN_S) = gate.py (BASE_MIN_S); split rule gate_features.py (calib_split)
+classifierB_readout,"tangent-space log map (upper triangle) -> logistic regression, C in {0.01, 0.1, 1} chosen by inner 3-fold GroupKFold — gate_fusion.py (C_GRID, ra_feat, fit_ts)"
+fusion_rule,fused score = mean of the two z scores — gate_fusion.py
+theta_sym,"the S1a NATURAL ZERO of the fused calibration score: ((0 - centre_A)/sd_A + (0 - centre_B)/sd_B)/2, i.e. the two conditions' own decision boundaries mapped through the V1 z — 02_decoding/simulation/gate_working_point_symmetric.py, re-derived in 03_figures/fig7_gate_accuracy_table.py (read_thresholds); column theta_sym of 02_decoding/simulation/result/gate_event_set_thresholds.csv"
+delta,"0.25 x IQR(session calibration fused scores) — gate_working_point_symmetric.py (GATE.IQR_K x calib_iqr), IQR_K = 0.25 of gate.py; column delta of the same CSV"
+theta_on,theta_sym + delta — gate_working_point_symmetric.py; column theta_on_s1 of gate_event_set_thresholds.csv
+theta_off,theta_sym - delta — gate_working_point_symmetric.py; column theta_off_s1 of gate_event_set_thresholds.csv
+karcher_solver,"checked (step-halving fixed point, tol 1e-10, itmax 20000)."
+gate_set,post_operative
+companion_panel,03_figures/fig7_gate_roc.py -> figures_out/fig7/fig7_gate_roc.png (the ROC this schematic explains)
+producer,03_figures/fig7_gate_method_schematic.py

@@ -1,0 +1,9 @@
+key,value
+paper_location,"Supplementary Note 2, target-availability paragraph: 'all ratios within 0.7%, all p > 0.65'"
+build_id,main
+cohort,"six participants of the supplementary experiment (S01, S09, S12, S23, S29, S35), one additional session each; 30 imagined-walking (MI+AO) and 30 observation-only (AO) trials per participant"
+excursion,"per trial: mean over the six walker sagittal goniometer channels (labels ending 'W X') of the channel's standard deviation over the trial, degrees"
+test,"ratio of medians MI+AO / AO; two-sided Mann-Whitney U over all 30 vs 30 trials per participant (calibration-segment trials included), uncorrected"
+max_abs_ratio_deviation,0.007458
+min_p,0.652044
+inputs,data/supplementary/prep/goni/<label>_goni.mat; gait_prep_supplementary/result/<sess>/s5m_export_event_conditions.csv (sub09: gait_prep_supplementary/result/s5_export_event_conditions.csv)

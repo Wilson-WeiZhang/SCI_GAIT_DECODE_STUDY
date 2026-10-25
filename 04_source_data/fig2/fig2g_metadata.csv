@@ -1,0 +1,10 @@
+field,value
+build_id,main
+source,"data/decoder_output/main/h_iw_trial_r_long.csv (model=calib, rpt_r; the scored trials of the 80 pyport <session>_trial_r.csv of data/decoder_output/main/h_iw_dump/, concatenated by build_tables.py (not distributed) under the scoring mask)"
+n,3172 trials / 80 sessions / 42 participants
+joint_groups,"rpt_r, model=calib; Hip / Knee / Ankle = mean of the left and right walker channel, All = mean of the six walker channels with a finite r. In 8 sessions one walker channel has no finite r in any trial (LAnkW X in subj01_sess01, subj02_sess01, subj02_sess02, subj03_sess01, subj04_sess01, subj05_sess01 and subj06_sess01; LKneW X in subj31_sess02), so there Ankle (or Knee) is the right-side value and All is the mean of the other five channels, not the mean of Hip, Knee and Ankle"
+ranking_key,"each panel ordered by its own joint median (Hip / Knee / Ankle / All), descending, so column k is a different session in each panel (per-panel order of 03_figures/fig2g_trial_r_export.py); the session_summary CSV keeps the All_median order and is the join key"
+cohort_session_medians,"median 0.4656 [IQR 0.3000, 0.6197], range 0.032-0.778"
+cohort_trial_medians,"pooled over all 3172 held-out trials: All 0.4609 [IQR 0.1908, 0.6740]; Hip 0.5028 [0.1152, 0.7574]; Knee 0.5024 [0.2442, 0.6904]; Ankle 0.4213 [0.1968, 0.6012] - recomputed from fig2g_trial_r_long.csv (same linear quantile as fig2g_trial_r_export.py)"
+matrix_files,"fig2g_trial_r_matrix_{Hip,Knee,Ankle,All}.csv: rows = trial slot, cols = session in the ranked order above"
+panel,"Fig. 2 panel c - per-session, per-trial decoding r boxes (Hip/Knee/Ankle/All), rest-null band behind"

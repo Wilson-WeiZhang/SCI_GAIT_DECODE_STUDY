@@ -1,0 +1,12 @@
+key,value
+build_id,main
+cohort,post_operative (449 trials / 11 sessions / 2 patients)
+k1_lme_intercept_se_waldp,+0.184978 / 0.009487 / 1.131e-84
+k1_pct_above_own_null,65.7 (criterion null_p<.05; sim>null_p95 gives 66.8)
+k2_lme_intercept_se_waldp,+0.385437 / 0.016324 / 2.947e-123
+k2_pct_above_own_null,92.0 (criterion null_p<.05; sim>null_p95 gives 92.0)
+k3_lme_intercept_se_waldp,+0.205592 / 0.007878 / 4.091e-150
+k3_pct_above_own_null,69.9 (criterion null_p<.05; sim>null_p95 gives 70.4)
+stars_convention,"two-sided exact Wilcoxon on 11 session means vs 0, sessions as units, case-level descriptive ; LME Wald P in the metadata only, scoped 11 clusters / 2 patients"
+scope,"n=2 SCI patients, case-level, descriptive; decode-independent"
+paper_location,Fig. 6 panel b

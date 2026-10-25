@@ -1,0 +1,12 @@
+key,value
+figure,"Supplementary Fig. 2b input - Reference | Decoded | Decoded (phase-shuffled), three 6x6 joint-joint correlation matrices on a shared RdBu_r colorbar"
+producer,03_figures/fig2_coord_matrix.py
+build_id,main
+cohort,healthy; 80 sessions present in the input dump
+input,data/decoder_output/main/abd_cohort_main.npz
+n_sessions_in_dump,80
+n_sessions_structure_similarity,80
+n_null_draws_finite,16000
+joint_labels,LHip; LKne; LAnk; RHip; RKne; RAnk
+display_polarity,"goniometers are mounted mirror-image on the two legs; the polarity vector from 03_figures/project_goni.py is applied as an outer product, flipping 9 of the 15 off-diagonal cells"
+outputs,figures_out/fig2/main/f2_panelB_cohort_coordmatrix.png; 04_source_data/fig2/fig2_coord_matrix_source_data.csv

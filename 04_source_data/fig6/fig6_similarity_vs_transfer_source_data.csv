@@ -1,0 +1,12 @@
+session,patient,cohort,k2_similarity,decode_trial_median_r
+pat01_sess04,P1,post_operative,0.491080,0.358072
+pat01_sess05,P1,post_operative,0.745424,0.612632
+pat01_sess06,P1,post_operative,0.840938,0.492296
+pat01_sess07,P1,post_operative,0.572668,0.188791
+pat01_sess08,P1,post_operative,0.752894,0.556429
+pat01_sess09,P1,post_operative,0.625008,0.500028
+pat02_sess03,P2,post_operative,0.422292,0.708792
+pat02_sess05,P2,post_operative,0.857048,0.585198
+pat02_sess06,P2,post_operative,0.841990,0.599524
+pat02_sess08,P2,post_operative,0.648057,0.496522
+pat02_sess09,P2,post_operative,0.784645,0.538915

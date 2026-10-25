@@ -1,0 +1,20 @@
+key,value
+panel,"Fig. 2h - left-limb triple cyclogram (hip-knee, hip-ankle, knee-ankle phase planes)"
+build_id,main
+producer,03_figures/fig2_cyclogram.py
+input,data/decoder_output/main/abd_cohort_main.npz
+n,LHip-LKnee: 79 paired sessions; LHip-LAnk: 73 paired sessions; LKnee-LAnk: 72 paired sessions
+rows,300 = 3 joint pairs x 2 series x 50 gait-cycle bins
+x_joint,joint on the horizontal axis
+y_joint,joint on the vertical axis
+n_paired_sessions,sessions with both joints of the pair present in the reference and decoded curves
+series,"reference (grey dashed line, grey CI shading) or decoded (line and CI shading coloured by gait_cycle_pct)"
+cycle_bin,gait-cycle bin index 0..49; each loop is closed by joining the last bin to bin 0
+gait_cycle_pct,gait-cycle phase (%) of the bin; sets the colour of the decoded segment starting at this bin
+x,"plotted x: session-mean curve of x_joint, z-scored over the cycle"
+y,"plotted y: session-mean curve of y_joint, z-scored over the cycle"
+ci_outer_x,"outer edge of the drawn 95% CI band, x"
+ci_outer_y,"outer edge of the drawn 95% CI band, y"
+ci_inner_x,"inner edge of the drawn 95% CI band, x"
+ci_inner_y,"inner edge of the drawn 95% CI band, y"
+ci_band,"95% CI across sessions (1.96*SD/sqrt(n) on each axis, in z units), half-width projected onto the local loop normal, capped at 2.5x its median and smoothed by a 3-bin periodic moving average; shading = quadrilaterals between consecutive outer and inner edge points"

@@ -1,0 +1,19 @@
+key,value
+file,03_figures/scoring_mask.csv
+rule,"a test trial is scored (keep = 1) when its onset is later than the end of the session's calibration recording (onset_s > cut_s, seconds on the session's preprocessed time line). The calibration recording is the stretch on which bad channels, ICA and ICLabel of the causal preprocessing were fitted (01_preprocessing/causal/healthy/plan.csv and patient/plan.csv, column cut_export_s). Every trial, scored or not, trains the decoder: fold map, training and decoded outputs do not depend on the mask."
+conditions,"IW = imagined walking (trial_idx = the decoder's trial index); RW = real walking (its own trial index); REST = the resting window paired with imagined-walking trial trial_idx, scored by the onset of the resting window itself"
+onset_s,"trial onset (REST: onset of the resting window) on the preprocessed time line, seconds"
+cut_s,"end of the calibration recording on the same time line, seconds"
+keep,1 = scored; read by 03_figures/analysis_config.py (keep_trial / filter_trials) and 03_figures/dump_h5.py
+keep_window_and_trial,REST only: the resting window AND its imagined-walking trial after the cut (the pairs a paired imagined-walking vs resting-input comparison keeps; not read by the scripts)
+keep_iw_ordinal,IW only: trial_idx > n_cal (equal to keep in every session)
+n_cal,number of imagined-walking trials inside the calibration recording
+"base_lo_s, lag_lo_s","start of the 1 s pre-trial baseline and of the 2 s decoder lag window, seconds"
+rest_ok,REST: 1 (a row exists only where the decoder drew a resting window for the trial)
+ev_trial_idx,IW / RW: position of the trial in the session's event file
+count_IW_healthy,"80 sessions, 4756 trials, scored 3172"
+count_IW_post_operative,"11 sessions, 449 trials, scored 282"
+count_IW_pre_operative,"4 sessions, 154 trials, scored 77"
+count_REST_healthy,"80 sessions, 4756 trials, scored 2910"
+count_REST_post_operative,"9 sessions, 315 trials, scored 225"
+count_RW_healthy,"80 sessions, 4739 trials, scored 3169"

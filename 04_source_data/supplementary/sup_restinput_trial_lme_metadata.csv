@@ -1,0 +1,38 @@
+key,value
+analysis,"Imagined-walking decoding with the trial's own EEG versus a resting-input window, trial-level paired difference, participant and session-within-participant random intercepts"
+build_id,main
+cohort,"healthy cohort,  causal prep (01_preprocessing/causal/healthy/: minimum-phase anti-aliasing and 0.1-40 Hz band-pass, bad channels / ICA / ICLabel from a calibration recording applied forward)"
+n_trials,1968
+n_sessions,80
+n_participants,42
+metric,"per-trial rpt_r (model=calib) averaged over walker joints finite in both inputs; trial scale, NOT the session-mean per-joint rpt_calib of Supplementary Fig. 1a-c / Supplementary Table 2"
+real_source,h_iw_trial_r_long.csv
+rest_source,h_rest_testonly_trial_r_long.csv
+model,d ~ 1 + (1|participant) + (1|participant:session); REML; statsmodels MixedLM
+trial_mean_r_real,0.407636
+trial_mean_r_rest,0.016960
+lme_r_mean_difference,0.392497
+lme_r_ci95,0.336693 to 0.448300
+lme_r_se,0.028472
+lme_r_z,13.7855
+lme_r_p,3.118e-43
+lme_r_p_reported,< 0.001
+lme_r_sd_participant,0.168139
+lme_r_sd_session_within_participant,0.049546
+lme_r_sd_trial_residual,0.448308
+lme_r_optimizer,cg
+lme_r_converged,True
+lme_fisherz_mean_difference,0.491563
+lme_fisherz_ci95,0.415078 to 0.568048
+lme_fisherz_p,2.205e-36
+lme_fisherz_optimizer,cg
+lme_fisherz_converged,True
+bootstrap_participant_equal_mean_difference,0.393034
+bootstrap_ci95,0.340563 to 0.447121
+bootstrap_B,2000
+bootstrap_seed,20260915
+bootstrap_fraction_le_0,0.0000
+participants_mean_difference_positive,42/42
+sessions_mean_difference_positive,79/80
+trials_difference_positive,1579/1968
+source_script,03_figures/sup_restinput_trial_lme.py

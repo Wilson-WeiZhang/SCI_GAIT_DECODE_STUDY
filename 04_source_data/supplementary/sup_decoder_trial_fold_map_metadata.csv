@@ -1,0 +1,12 @@
+key,value
+file,sup_decoder_trial_fold_map_source_data.csv
+rows,one per session x trial
+columns,"session, cohort (healthy / post_operative / pre_operative), condition (IW = imagined walking, RW = real walking), trial_idx (the run's trial index; the scoring-mask key), test_ordinal, fold, scored"
+build_id,main
+script,03_figures/sup_decoder_trial_tables.py
+cv,"random 10-fold cross-validation within each session; every trial is decoded once, by the model of the fold that holds it out; the same fold map serves the random 10-fold runs of a condition (the contiguous-fold control has its own folds)"
+scored,"1 = trial recorded after the session's calibration recording (scoring mask, condition IW / RW, column keep); every trial, scored or not, trains the decoder"
+count_IW_healthy,"80 sessions, 4756 trials, scored 3172"
+count_RW_healthy,"80 sessions, 4739 trials, scored 3169"
+count_IW_post_operative,"11 sessions, 449 trials, scored 282"
+count_IW_pre_operative,"4 sessions, 154 trials, scored 77"

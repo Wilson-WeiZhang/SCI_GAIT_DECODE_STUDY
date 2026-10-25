@@ -1,0 +1,5 @@
+panel,convention,band_lo_p2p5,band_hi_p97p5
+Hip,session_median,-0.181087,0.283442
+Knee,session_median,-0.113437,0.154457
+Ankle,session_median,-0.130871,0.129175
+All,session_median,-0.197731,0.194859

@@ -1,0 +1,10 @@
+key,value
+analysis,healthy imagined-walking sensitivity to excluding sessions with > 10 interpolated channels
+build_id,main
+cohort,"healthy cohort (80 sessions / 42 participants), scored trials only (3,172)"
+excluded_sessions,subj04_sess02|subj21_sess01|subj22_sess02|subj26_sess01|subj31_sess01|subj32_sess01|subj38_sess02
+exclusion_rule,n_bad_ch > 10 in sup_prep_qc_table_source_data.csv (causal-prep calibration decomposition; the count Supplementary Table 6 prints)
+headline_def,median over sessions of each session's median trial r (six joints averaged per trial); IQR 25th-75th
+guards,all80 reproduces headline 0.465586 and Fig. 3c k1 rho 0.832841 within 5e-5
+script,03_figures/sup_interp_channel_sensitivity.py
+paper_location,"Supplementary Note 9, sentence after the Supplementary Table 6 census "

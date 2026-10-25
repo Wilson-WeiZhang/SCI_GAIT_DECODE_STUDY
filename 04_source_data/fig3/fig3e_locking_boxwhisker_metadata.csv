@@ -1,0 +1,15 @@
+key,value
+figure,"Fig. 3 panel e - per-session gait-phase locking |c| at f0, imagined walking vs trial-matched rest (box = IQR, centre = median, whiskers = 10th-90th percentile of the session's bootstrap sampling distribution)"
+producer,03_figures/fig3e_locking_boxwhisker.py
+build_id,main
+cohort,healthy; 80 sessions plotted
+input_bootstrap_c,data/decoder_output/persession_bootstrap_c_main_b1000.csv
+input_responder_split,04_source_data/fig3/fig3_def_resnonres_source_data.csv
+harmonic_k,1
+n_boot_in_input,1000
+n_sessions,80
+n_responder,55
+n_non_responder,25
+distribution_plotted,"BOOTSTRAP sampling distribution of each session's inter-trial locking c - NOT a distribution over trials; the same trial resample is applied to each MI trial's yoked rest window, so IW and rest are paired"
+session_order,"sorted by the median of the imagined-walking bootstrap distribution (IW_p50), descending"
+outputs,figures_out/fig3/fig3e_locking_boxwhisker.png; figures_out/fig3/fig3e_locking_boxwhisker_legend.png; 04_source_data/fig3/fig3e_locking_boxwhisker_source_data.csv

@@ -1,0 +1,7 @@
+cohort,session,exclusion_reason,retained_in_analysis
+healthy,subj10_sess01,Insufficient valid recording,no
+healthy,subj14_sess01,Goniometer failure,no
+healthy,subj33_sess02,EEG-goniometer alignment failure,no
+patient,pat01_sess03,Recording hardware failure,no
+patient,pat02_sess04,Recording hardware failure,no
+patient,pat02_sess07,Recording hardware failure,no

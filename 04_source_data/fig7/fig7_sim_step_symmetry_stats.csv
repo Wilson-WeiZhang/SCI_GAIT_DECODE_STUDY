@@ -1,0 +1,4 @@
+comparison,p_fdr_bh,star_drawn
+Walker_minus_Decoded,0.711514,ns
+Decoded_minus_CoordinationNull,5.07185e-09,***
+Decoded_minus_InPhaseNull,1.85507e-18,***

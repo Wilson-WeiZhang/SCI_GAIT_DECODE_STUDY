@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+message: If you use this software, please cite the associated paper.
+title: >-
+  Non-invasive decoding of continuous lower-limb kinematics from imagined walking
+  in healthy adults and spinal cord injury patients
+type: software
+version: 1.0.0
+date-released: "2026-10-25"
+license: MIT
+repository-code: https://github.com/Wilson-WeiZhang/SCI_GAIT_DECODE_STUDY
+authors:
+  - family-names: Zhang
+    given-names: Wei
+    affiliation: Nanyang Technological University, Singapore
+  - family-names: Phyo Wai
+    given-names: Aung Aung
+    affiliation: Nanyang Technological University, Singapore
+  - family-names: Robinson
+    given-names: Neethu
+    affiliation: Nanyang Technological University, Singapore
+  - family-names: Liu
+    given-names: Rui
+    affiliation: Nanyang Technological University, Singapore
+  - family-names: Ng
+    given-names: Han Wei
+    affiliation: Nanyang Technological University, Singapore
+  - family-names: Wee
+    given-names: Seng Kwee
+    affiliation: Tan Tock Seng Hospital, Singapore
+  - family-names: Phua
+    given-names: Min Wee
+    affiliation: Tan Tock Seng Hospital, Singapore
+  - family-names: Lui
+    given-names: Wen Li
+    affiliation: Tan Tock Seng Hospital, Singapore
+  - family-names: Sidarta
+    given-names: Ananda
+    affiliation: R3 Institute Singapore, Nanyang Technological University, Singapore
+  - family-names: Lim
+    given-names: Lek Syn
+    affiliation: R3 Institute Singapore, Nanyang Technological University, Singapore
+  - family-names: Chua
+    given-names: Karen Sui Geok
+    affiliation: Tan Tock Seng Hospital, Singapore
+  - family-names: Wan
+    given-names: Kai Rui
+    affiliation: National Neuroscience Institute, Singapore
+  - family-names: Ng
+    given-names: Zhi Yan Valerie
+    affiliation: Tan Tock Seng Hospital, Singapore
+  - family-names: Guan
+    given-names: Cuntai
+    affiliation: Nanyang Technological University, Singapore
+    email: ctguan@ntu.edu.sg

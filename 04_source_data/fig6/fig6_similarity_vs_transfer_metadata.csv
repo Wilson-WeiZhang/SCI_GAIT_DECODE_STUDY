@@ -1,0 +1,12 @@
+key,value
+build_id,main
+cohort,post_operative
+spearman_rho_all11,0.218182
+lme_slope_patient_cluster,0.192277
+lme_slope_se,0.283747
+lme_slope_wald_p,0.498002
+ols_patientFE_slope_p,0.167645 / 0.569160
+x_source,fig6_patient_in_healthy_similarity_source_data.csv (not recomputed)
+y_source,fig5b_session_box_source_data.csv (Fig.5b; not recomputed)
+scope,"n=2 SCI patients, 11 post_operative sessions, case-level, DESCRIPTIVE; shared harmonic machinery — association display, not a biomarker claim"
+paper_location,"Supplementary Fig. 1g (panel S1g_similarity_vs_transfer.png, first cited by Supplementary Note 6)"

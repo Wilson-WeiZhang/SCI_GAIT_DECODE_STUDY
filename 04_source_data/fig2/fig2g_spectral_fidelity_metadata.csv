@@ -1,0 +1,13 @@
+field,value
+panel,Fig. 2g
+build_id,main
+cohort,healthy cohort (80 sessions / 42 participants)
+input_npz,data/decoder_output/main/spectra_main.npz
+inclusion_rule,n_trials >= 5 AND finite f0 AND finite reference+decoded PSD for that joint
+frequency_axis,"freq / f0 (session cadence), interpolated onto 200 points over 0.2-4.0"
+statistic,"geometric mean across sessions; band = +-1.96 log10-SEM, back-transformed"
+normalization,each session's PSD divided by its own maximum on the relative grid
+n_sessions_LHip,80
+n_sessions_LKnee,79
+n_sessions_LAnk,73
+source_data,04_source_data/fig2/fig2g_spectral_fidelity_source_data.csv

@@ -1,0 +1,20 @@
+key,value
+figure,Supplementary Fig. 11a-b 
+panels,a per-trial r by condition; b forest of per-participant mean cycle-pair difference + model (Fig. 3c grammar)
+note,Supplementary Note 2 (imagery-observation dissociation)
+experiment,"supplementary experiment (MI+AO vs AO)"
+build_id,main
+cohort,"6 healthy cohort participants, one additional session each: SUB_01_sess05, SUB_09_sess03, SUB_12_sess03, SUB_23_sess03, SUB_29_sess03, SUB_35_sess03 "
+n,240 imagine trials = 6 participants x (20 + 20); 60 cycle pairs
+basis,leave-subject-out basis bases/iw_lso/subjNN_sess01_shared_delta_pca_lso.mat
+readout,"random 10-fold, inner-CV lambda; scored after the calibration cut"
+decoding_target,the reference walker's six sagittal joints
+scope,"case level: one session per participant, 6 participants, descriptive"
+test_within,"two-sided Wilcoxon signed-rank on the 10 per-cycle-pair differences, BH-FDR-corrected over the 6 participants; drawn marker and star read the corrected p; forest bar = t 95% CI of the mean pair difference (uncorrected)"
+correction_method,"BH-FDR over the participants, in both per-participant families (paired MI+AO - AO Wilcoxon; AO against zero); Source Data column p_corr"
+test_across,"r ~ condition + (1 + condition | participant), REML, condition centred"
+test_across_result,"beta = 0.335134, 95% CI [0.250160, 0.420107], z = 7.7301, p = 1.07488e-14"
+box_convention,"box 25th-75th percentile, whiskers 10th-90th"
+inputs,gait_prep_supplementary/result/main/lme_trialwise/sc_trials_all.csv; gait_prep_supplementary/result/main/lme_trialwise/s5m_trialwise_lme.json
+renderer,03_figures/sup_imagery_observation.py
+canvas,"16 cm SI contract (03_figures/si_panel_style.py): a full 160 mm, b half, both 55 mm high, 600 dpi"

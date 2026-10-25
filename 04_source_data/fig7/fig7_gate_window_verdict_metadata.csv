@@ -1,0 +1,13 @@
+key,value
+figure,"Supplementary Fig. 1f — window-by-window verdict panel. Five layers on one shared 180 s concatenated clock: (1) instructed band (truth), (2) fused gate score with theta_sym, the +-delta band and a per-window verdict fill between the score and theta_sym, (3) per-window decision raster, (4) gate state under rule S1, (5) the excerpt's agreement block below the axis.  No in-figure title; legend is a separate PNG."
+build_id,post_operative
+window_s,3
+score_column,"e_sigma -- the fold-standardised score, in units of the delta of the fold that emitted each decision, so theta_sym = 0 and theta_on/off = +/-1 for every session. The per-fold (theta_sym, delta) spread is in fig7_gate_accuracy_source_data.csv (not distributed) (row_type=fold_thresholds). "
+gate_set,"post_operative (11 sessions: pat01_sess04, pat01_sess05, pat01_sess06, pat01_sess07, pat01_sess08, pat01_sess09, pat02_sess03, pat02_sess05, pat02_sess06, pat02_sess08, pat02_sess09); the panel shows ONE of them, the whole set is fig7_gate_timeline.png."
+rule_S0,"memory-less per-window classifier, open iff s(t) >= theta_sym. This is what the verdict fill and the decision raster show: hit = IW and s >= theta_sym, miss = IW and s < theta_sym, false alarm = rest and s >= theta_sym, correct rest = rest and s < theta_sym (drawn with NO fill)."
+thresholds,"session pat01_sess09: theta_sym = 0.000000, delta = 1.000000, theta_on = 1.000000, theta_off = -1.000000. theta_sym is the S1a natural zero ((0 - centre_A)/sd_A + (0 - centre_B)/sd_B)/2; delta = 0.25 * IQR of the session's calibration fused scores."
+excerpt,"pat01_sess09, concatenated t = 0-180 s (180 s). Same session and same t0 rule as figures_out/fig7/fig7_gate_timeline_excerpt.png (the first imagined-walking block that leaves a full 180 s inside the session), so the two panels show the same stretch."
+whole_session_metrics,"n = 437 windows; S0 agreement 0.910755, sensitivity 0.959184, specificity 0.811189; S1 sensitivity 0.952381, specificity 0.818182. Asserted equal to 1e-6 to the pat01_sess09 row of fig7_gate_accuracy_source_data.csv (not distributed) (same window set, n_decisions checked first) before anything is written."
+clock,"CONCATENATED, not session wall-clock: the evaluated IW and rest events only, back to back in true chronological order at their true durations. Dropped and invisible: real walking, sit-to-stand, every inter-event gap and pre-cue interval, and any event too short for one 3 s window. Every imagined-walking and rest event of the session is on this clock. There is NO null category. Thin pale verticals are event seams."
+cohort,"n = 2 patients, case-level. One session of one patient is an illustration, not an estimate."
+producer,03_figures/fig7_gate_window_verdict.py

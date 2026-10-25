@@ -1,0 +1,12 @@
+key,value
+paper_location,"Supplementary Table 5 - per-session trial exclusion before decoder fitting (patient rows tabulated; healthy per-session rows in this Source Data only, healthy totals in the legend), first cited in Supplementary Note 8"
+build_id,main
+build_id_note,"healthy; patient (pre_operative + post_operative)"
+healthy_scope,80 sessions / 42 participants; imagined-walking + real-walking trials
+healthy_source,prep_healthy_cohort_trial_inventory.csv (not distributed)
+healthy_summary,48 of 9543 (0.50%; per-session range 0.00-7.50%)
+patient_scope,"15 retained sessions (4 pre-operative + 11 post-operative), N = 2; imagined-walking trials"
+patient_source,prep_patient_patient15_trial_inventory.csv (not distributed)
+patient_summary,26 of 629 (4.13%; per-session range 0.00-33.33%)
+patient_post_operative_summary,8 of 457 (1.75%; per-session range 0.00-6.82%)
+assertions,qc-good = decoded trial count in 80/80 healthy sessions (IW + RW) and 15/15 patient sessions

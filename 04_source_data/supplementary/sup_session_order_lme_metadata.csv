@@ -1,0 +1,35 @@
+key,value
+renderer,03_figures/sup_session_order_lme.py
+paper_location,"Main Results, session-order sentence after the Fig. 2 results (values); Supplementary Note 10, paragraph 'Session-order, participant and session variance components'  (method only, no values)."
+build_id,main
+cohort,"healthy cohort,  causal prep (01_preprocessing/causal/healthy/: minimum-phase anti-aliasing and 0.1-40 Hz band-pass, bad channels / ICA / ICLabel from a calibration recording applied forward): 80 sessions / 42 participants"
+input_source,04_source_data/fig2/fig2g_trial_r_long.csv
+outcome,"per-trial calibrated r, mean over 6 joints (rpt_r, model=calib)"
+model,r ~ 1 + session2 + (1|subject) + (1|subject:session)
+estimation,REML for the fixed effect and the variance components; both models refitted by ML for the likelihood-ratio test
+engine,statsmodels MixedLM (Wald z; no Satterthwaite/KR denominator df)
+optimizer,lbfgs
+nlme_crosscheck,NLME beta=-0.025282 se=0.024915 df=37 t=-1.015 p=0.3168
+robustness_check,"paired t-test on per-session means, complete pairs only"
+n_trials,3172
+n_sessions,80
+n_participants,42
+n_participants_paired,38
+participants_single_session,subj05|subj10|subj14|subj33
+mean_trials_per_session,39.65
+reported_beta_session2,-0.025282
+reported_beta_se,0.024916
+reported_beta_ci95,"[-0.074117, 0.023553]"
+reported_beta_wald_z,-1.014705
+reported_beta_wald_p,0.310246
+reported_lrt_chi2_1df,22.307475
+reported_lrt_p_boundary_corrected,1.1615e-06
+reported_icc_session_mean_level,0.695692
+reported_icc_single_trial_level,0.209506
+reported_icc11_model_free,0.666619
+reported_test_retest_pearson_r,0.669254
+reported_test_retest_p,4.34847e-06
+reported_n_pairs,38
+reported_tost_p_bound_0.10,0.00250951
+note_sentence_as_printed,"beta = -0.025, 95% CI -0.074 to 0.024, p = 0.310; participant variance component likelihood-ratio p < 0.001; two session means correlate at r = 0.67 (p < 0.001, n = 38 pairs)"
+source_script,03_figures/sup_session_order_lme.py

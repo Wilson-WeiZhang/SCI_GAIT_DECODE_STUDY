@@ -1,0 +1,100 @@
+key,value
+panel,"Fig. 4 panel d - per-session IW-vs-RW gait-phase delay (cosine-fit offset, one fit per session)"
+build_id,main
+cohort,"healthy cohort: 80 sessions / 42 participants, 60 common channels"
+n_sessions,80
+n_participants,42
+n_channels,60
+input_IW,data/decoder_output/diag_harmonic_phase_responder_split/persession_harmonic_phase_cycle9_complex.csv
+input_RW,data/decoder_output/diag_real_walking_persession/persession_harmonic_phase_cycle9_complex.csv
+input_stride_period,data/decoder_output/diag_main_exec_goni_psd_peaks/main_exec_goni_peak_bands.csv
+input_cohort_reference,04_source_data/fig4/fig4_phase_correspondence_metadata.csv
+cycle_points,"0;0.125;0.25;0.375;0.5;0.625;0.75;0.875 (the 9th, 100 %, column repeats 0 % and is dropped)"
+reference_phase_rad,"-2.193821 (cohort RW map's unified reference, applied to BOTH conditions in every session - identical to fig4_phase_correspondence.py; it does NOT cancel, since Re(c e^-i ref) is not a rotation of a real map, and is held at the cohort value so all sessions share one convention)"
+model,"per session: M_s,k(i,j) = A cos(2 pi k (phi_i - phi_j) - Delta) + b, OLS on [cos, sin, 1] over all 64 cells"
+Delta_convention,"Delta_pct_cycle = Delta_rad / (2 pi k) x 100, wrapped to (-50/k, +50/k]; phi_IW = phi_RW + Delta (mod 1/k), so NEGATIVE Delta = the imagined map arrives EARLIER in the cycle than the executed one (imagery leads); Delta_deg_harmonic = Delta_pct x k x 3.6"
+Delta_ms,"Delta_pct/100 x stride period x 1000; period = 1 / f0 with f0 = centre of that SESSION'S OWN k=1 EXEC goniometer band, (band_lo + band_hi)/2"
+stride_period_s_median,1.0989
+circular_statistic,"theta_s = 2 pi k Delta_s / 100; circular mean = angle(sum exp(i theta)); R_bar = |sum exp(i theta)| / n; UNWEIGHTED is primary, the amplitude-weighted variant (weights = A_s) is reported alongside"
+rayleigh_method,"z = n R_bar^2; P ~ exp(sqrt(1 + 4n + 4(n^2 - R^2)) - (1 + 2n)), R = n R_bar (standard approximation; scipy has no Rayleigh test)"
+multiple_comparison,"Benjamini-Hochberg over the 3 harmonics; significance is shown only by the mark above each harmonic (*** / ** / * at BH q < 0.001 / 0.01 / 0.05, ns otherwise); the points and box of each harmonic are drawn in its identity colour (project_palette.HARMONIC_COLORS) whatever its significance"
+wilcoxon_note,"secondary, linear: scipy.stats.wilcoxon of the wrapped Delta_s against 0"
+median_IQR_note,"linear median / quartiles of Delta_s AFTER wrapping to (-50/k, +50/k]; they are linear statistics on circular data and are secondary to the circular mean"
+n_boot,1000
+seed_bootstrap,0
+seed_jitter,3
+bootstrap,"resample the sessions with replacement, recompute the circular mean; 95 % percentile CI taken after wrapping the bootstrap means onto the point estimate"
+k1_circ_mean_Delta_pct,22.1056
+k1_circ_mean_CI95_lo,8.1802
+k1_circ_mean_CI95_hi,37.2831
+k1_circ_mean_Delta_pct_weighted,23.2727
+k1_circ_mean_Delta_deg_harmonic,79.58
+k1_R_bar,0.1913
+k1_rayleigh_z,2.9277
+k1_rayleigh_P,0.05306
+k1_rayleigh_P_BH,0.07959
+k1_wilcoxon_P,0.07517
+k1_median_Delta_pct,8.5669
+k1_IQR_Delta_pct,43.2694
+k1_Q1_Delta_pct,-16.2046
+k1_Q3_Delta_pct,27.0648
+k1_median_Delta_ms,98.66
+k1_participant_circ_mean_Delta_pct,27.1794
+k1_participant_R_bar,0.2225
+k1_participant_rayleigh_P,0.125
+k1_participant_n,42
+k1_cohort_Delta_pct_copied,27.7876
+k1_mean_A,0.2765
+k1_median_R2,0.4558
+k2_circ_mean_Delta_pct,-11.2536
+k2_circ_mean_CI95_lo,-13.1641
+k2_circ_mean_CI95_hi,-9.2113
+k2_circ_mean_Delta_pct_weighted,-11.4288
+k2_circ_mean_Delta_deg_harmonic,-81.026
+k2_R_bar,0.5811
+k2_rayleigh_z,27.0122
+k2_rayleigh_P,1.456e-13
+k2_rayleigh_P_BH,4.369e-13
+k2_wilcoxon_P,3.866e-09
+k2_median_Delta_pct,-10.1925
+k2_IQR_Delta_pct,9.7719
+k2_Q1_Delta_pct,-15.0164
+k2_Q3_Delta_pct,-5.2445
+k2_median_Delta_ms,-112.04
+k2_participant_circ_mean_Delta_pct,-10.9759
+k2_participant_R_bar,0.6069
+k2_participant_rayleigh_P,4.208e-08
+k2_participant_n,42
+k2_cohort_Delta_pct_copied,-13.885
+k2_mean_A,0.3633
+k2_median_R2,0.4953
+k3_circ_mean_Delta_pct,-13.5652
+k3_circ_mean_CI95_lo,-19.2026
+k3_circ_mean_CI95_hi,-8.9492
+k3_circ_mean_Delta_pct_weighted,-11.3686
+k3_circ_mean_Delta_deg_harmonic,-146.504
+k3_R_bar,0.1718
+k3_rayleigh_z,2.36
+k3_rayleigh_P,0.09416
+k3_rayleigh_P_BH,0.09416
+k3_wilcoxon_P,0.9122
+k3_median_Delta_pct,-3.681
+k3_IQR_Delta_pct,19.1905
+k3_Q1_Delta_pct,-9.2793
+k3_Q3_Delta_pct,9.9112
+k3_median_Delta_ms,-37.98
+k3_participant_circ_mean_Delta_pct,-14.5397
+k3_participant_R_bar,0.2332
+k3_participant_rayleigh_P,0.1014
+k3_participant_n,42
+k3_cohort_Delta_pct_copied,-11.0389
+k3_mean_A,0.2601
+k3_median_R2,0.4383
+perm_null_method,"phase-label permutation null: for each session and harmonic the RW cycle-point labels (columns of that session's 8 x 8 IW x RW correspondence matrix, same convention as the cohort permutation in fig4_phase_correspondence.py; cohort reference phase unchanged) are shuffled, the same per-session OLS cosine fit is rerun and the null Delta is wrapped to (-50/k, +50/k] exactly like the observed Delta; N_PERM = 1000 shuffles per session, independent permutation per harmonic, numpy default_rng(20260925); null Deltas pooled over the 80 sessions per harmonic; dashed lines = 2.5th and 97.5th percentiles"
+perm_null_n_per_harmonic,80000
+k1_perm_null_Delta_pct_p2.5,-47.4336
+k1_perm_null_Delta_pct_p97.5,47.4349
+k2_perm_null_Delta_pct_p2.5,-24.0068
+k2_perm_null_Delta_pct_p97.5,23.8377
+k3_perm_null_Delta_pct_p2.5,-15.8406
+k3_perm_null_Delta_pct_p97.5,15.8489

@@ -1,0 +1,35 @@
+key,value
+figure,"Fig. 4 panel h - cyclic imagined-walking x real-walking phase-lag profile: spatial correlation between the IW and RW signed phase-modulation maps against the IW - RW lag (% gait cycle), one curve per harmonic k1 / k2 / k3 with the continuous phase-offset (cosine) fit; two bottom-row slots wide "
+peak_marker,"filled diamond in the harmonic colour at the fitted peak nearest zero lag = (Delta_k, A_k + b_k) for each harmonic, with a thin dotted vertical guide down to r = 0; Delta_k is wrapped to +-50/k % so that peak is the one at Delta_k"
+offset_indicator,"k2 only: double-headed arrow from zero lag to the k2 peak lag, drawn 0.10 r above the peak, labelled 'Δ = −13.9 % (IW leads)'; 'A = 0.72' printed left of the k2 peak; k1 / k3 Delta labels not printed"
+annotation_values,"formatted in code from the fit: k1 Δ = +27.8 %, A = 0.35; k2 Δ = −13.9 %, A = 0.72; k3 Δ = −11.0 %, A = 0.58 (only the k2 values are printed); no p values in the panel"
+fit_scope,"A and Delta here are the COHORT-level cosine fit of the session-equal correspondence matrix (80 sessions pooled); Fig. 4d (phase offset) and Fig. 4f (correspondence amplitude) show PER-SESSION fits, a different estimator (per-session values in fig4_phase_delay_persession_metadata.csv / fig4_correspondence_amplitude_metadata.csv)"
+build_id,main
+cohort,"healthy cohort (80 sessions / 42 participants); session-equal complex maps"
+producer,"03_figures/fig4_phase_correspondence.py"
+output,figures_out/fig4/fig4_phase_lag_profile.png
+n_sessions,80
+n_channels,60
+points,mean of the 8 x 8 correspondence-matrix cells at each cyclic lag (phi_IW - phi_RW) mod 1; bin = 12.5 % cycle; columns lag_frac / mean_corr
+line,fitted cosine A_k cos(2 pi k lag - Delta_k) + b_k sampled at 401 points over one full cycle of lag (-50 .. +50 % gait cycle); fitted_corr = the same closed form at the 8 measured lags
+Delta_convention,"lag = phi_IW - phi_RW; negative Delta = the IW map matches the RW map at an EARLIER IW phase, i.e. imagined walking leads"
+colour,"project_palette.HARMONIC_COLORS (k1 #9C3FA6, k2 #E07FB0, k3 #7A86D9), as Fig. 4d-f"
+reference_lines,dashed grey vertical = zero lag; solid grey horizontal = r 0
+k1_A,0.354307
+k1_A_CI95,"[0.256908, 0.424692]"
+k1_A_perm_p,0.016983
+k1_Delta_pct_cycle,27.7876
+k1_Delta_CI95,"[22.0310, 35.2871]"
+k1_b,-1.2e-05
+k2_A,0.72223
+k2_A_CI95,"[0.609577, 0.776816]"
+k2_A_perm_p,0.002997
+k2_Delta_pct_cycle,-13.885
+k2_Delta_CI95,"[-15.5889, -12.7002]"
+k2_b,1e-06
+k3_A,0.577565
+k3_A_CI95,"[0.354611, 0.658210]"
+k3_A_perm_p,0.000999
+k3_Delta_pct_cycle,-11.0389
+k3_Delta_CI95,"[-13.6549, -8.7177]"
+k3_b,1e-06

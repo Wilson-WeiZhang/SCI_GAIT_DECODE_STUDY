@@ -1,0 +1,28 @@
+key,value
+figure,Fig. 6 panel c - patient sessions in the healthy session-level phase-map-similarity distribution 
+build_id,main
+cohort,post_operative only
+metric,"|complex spatial coherence|, verbatim from fig6_patient_healthy_harmonic_similarity.py"
+patient_values_provenance,"READ from fig6_patient_healthy_harmonic_similarity_source_data.csv row_type=session  - not recomputed"
+k1_healthy_lpo_median,0.516098
+k1_post_operative_percentile_range,29-79 pct of the healthy LPO distribution
+k1_post_operative_above_null_p95,11/11
+k1_P1_case_vs_healthy,"case 0.523 vs norm 0.526+/-0.238, t(41)=-0.01, P=.992"
+k1_P1_rank_percentile,"19/42 below = 45.2 pct, exact binomial 95% CI 29.8-61.3"
+k1_P2_case_vs_healthy,"case 0.595 vs norm 0.526+/-0.238, t(41)=0.29, P=.775"
+k1_P2_rank_percentile,"26/42 below = 61.9 pct, exact binomial 95% CI 45.6-76.4"
+k2_healthy_lpo_median,0.772035
+k2_post_operative_percentile_range,6-75 pct of the healthy LPO distribution
+k2_post_operative_above_null_p95,11/11
+k2_P1_case_vs_healthy,"case 0.671 vs norm 0.718+/-0.159, t(41)=-0.29, P=.771"
+k2_P1_rank_percentile,"13/42 below = 31.0 pct, exact binomial 95% CI 17.6-47.1"
+k2_P2_case_vs_healthy,"case 0.711 vs norm 0.718+/-0.159, t(41)=-0.05, P=.962"
+k2_P2_rank_percentile,"15/42 below = 35.7 pct, exact binomial 95% CI 21.6-52.0"
+k3_healthy_lpo_median,0.419909
+k3_post_operative_percentile_range,18-95 pct of the healthy LPO distribution
+k3_post_operative_above_null_p95,11/11
+k3_P1_case_vs_healthy,"case 0.471 vs norm 0.390+/-0.153, t(41)=0.53, P=.602"
+k3_P1_rank_percentile,"26/42 below = 61.9 pct, exact binomial 95% CI 45.6-76.4"
+k3_P2_case_vs_healthy,"case 0.428 vs norm 0.390+/-0.153, t(41)=0.24, P=.808"
+k3_P2_rank_percentile,"23/42 below = 54.8 pct, exact binomial 95% CI 38.7-70.2"
+rank_percentile_range_all,"31-62 pct, 95% CI 18-76 (3 harmonics x 2 patients; quoted in Supplementary Note 6)"

@@ -1,0 +1,14 @@
+key,value
+paper_location,Supplementary Fig. 3d - Cross-session independence: locking (session 1) predicts decoding (session 2) (first cited in Supplementary Note 4)
+build_id,main
+cohort,"healthy cohort, main"
+n_sessions,80
+n_participants,42
+input_master,04_source_data/fig3/fig3_master_source_data.csv
+n_two_session_subjects,38
+cross_excess_A_to_rB_rho,0.614
+cross_excess_A_to_rB_p,4.1e-05
+cross_mi_A_to_rB_rho,0.5435
+cross_excess_pooled_2n_rho,0.6344
+cross_excess_pooled_p,7.6e-10
+within_session_excess_rho,0.8328

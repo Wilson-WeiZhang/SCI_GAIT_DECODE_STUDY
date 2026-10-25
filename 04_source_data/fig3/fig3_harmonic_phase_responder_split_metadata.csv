@@ -1,0 +1,18 @@
+key,value
+cohort,main healthy cohort
+decoder_version,main
+build_id,main
+harmonic_dump,data/decoder_output/diag_harmonic_phase_responder_split/persession_harmonic_phase_cycle9_complex.csv
+harmonics,k1 k2 k3
+n_channels,60
+n_nonresponder,25
+n_responder,55
+n_sessions,80
+n_subjects,42
+panel,"Fig. 3 panel b - cohort gait-phase locking topographies, k1-k3 x 9 gait-cycle points"
+prep,prep (data/healthy_prep)
+ref_phase_rad,-1.050285
+shared_clim_abs,0.132673
+sig_marker_def,"one-sample t across the group's sessions that signed locking != 0, BH-FDR alpha=0.05 per harmonic row"
+split_definition,responder = MI |c|(k1) > own resting null 95th pct (200-resample); within-session one-sided p<0.05
+split_source,04_source_data/fig3/fig3_def_resnonres_source_data.csv

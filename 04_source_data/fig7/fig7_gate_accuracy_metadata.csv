@@ -1,0 +1,12 @@
+key,value
+window_s,3
+per_fold_thresholds,"Successive decisions inside one session can come from different folds and hence from different (theta_sym, delta) pairs. The state machine is run on `e_sigma`, each decision already standardised by its emitting fold, so the rule constants are uniform (+1 / -1) even though the underlying thresholds are not. The fold-to-fold spread per session is in the source data (row_type=fold_thresholds); 0 folds drew a reference shorter than the declared 30 s."
+figure,"intent-gate working-point accuracy table (workbook supplementary/main/Supplementary_Table_Gate_Working_Points.xlsx); rendered table PNG, no plotting axes, no in-figure title. Per session + a decision-weighted pooled row. The mean tiled AUC is in fig7_gate_roc_source_data.csv."
+gate_set,"post_operative (11 sessions: pat01_sess04, pat01_sess05, pat01_sess06, pat01_sess07, pat01_sess08, pat01_sess09, pat02_sess03, pat02_sess05, pat02_sess06, pat02_sess08, pat02_sess09)"
+rule_S0,"memory-less per-window classifier, open iff s(t) >= theta_sym."
+thresholds,"theta_sym = S1a natural zero = ((0 - centre_A)/sd_A + (0 - centre_B)/sd_B)/2; delta = 0.25 * IQR(session calibration fused scores); theta_on = theta_sym + delta, theta_off = theta_sym - delta. Recomputed here from the thresholds CSV."
+time_weighting,"Each decision is one 1 s hop, so a fraction of decisions is a time-weighted fraction of the concatenated valid IW + rest stream. The pooled row re-aggregates raw counters (it is NOT a mean of session means); the pooled AUC columns ARE means over sessions, as everywhere else in this figure."
+input,02_decoding/simulation/result/main/gate_within_session_scores_T3.csv + 02_decoding/simulation/result/main/gate_within_session_thresholds_T3.csv
+cohort,"n = 2 patients, case-level. Eleven sessions from two people is not a population estimate."
+build_id,main
+producer,03_figures/fig7_gate_accuracy_table.py

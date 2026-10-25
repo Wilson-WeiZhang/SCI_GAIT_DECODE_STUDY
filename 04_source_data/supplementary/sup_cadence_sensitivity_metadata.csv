@@ -1,0 +1,37 @@
+key,value
+analysis,Reference-walker cadence per imagined-walking trial versus the decoder's fold calibration; trial-level association with decoding accuracy
+build_id,main
+cohort,healthy cohort
+n_trials_cadence,4756
+n_trials_scored,3172
+n_sessions,80
+n_participants,42
+trial_cadence,"1 / median interval between hip-flexion peaks, left and right hip averaged"
+fold_calibration,f0 = PSD peak 0.45-1.15 Hz of the fold's training trials; fc_k = peak in k f0 +/- 0.25 Hz
+band_test,harmonic k inside when |k f_trial - fc_k| <= 0.18 Hz (demodulator half-power cut-off)
+f0_fold_median_hz,0.920
+abs_deviation_median_hz,0.0112
+abs_deviation_p90_hz,0.0290
+abs_deviation_median_pct,1.24
+abs_deviation_p90_pct,3.19
+within_session_sd_median_hz,0.0154
+trials_all_harmonics_inside,4731/4756
+trials_all_harmonics_inside_pct,99.47
+trials_k1_inside,4756/4756
+trials_k2_inside,4753/4756
+trials_k3_inside,4731/4756
+model,r ~ |deviation| + (1|participant) + (1|participant:session); REML; scored trials
+lme_beta_r_per_hz,-1.2386
+lme_ci95,-2.1864 to -0.2908
+lme_z,-2.561
+lme_p,1.043e-02
+lme_r_change_at_median_deviation,-0.0129
+lme_optimizer,cg
+lme_converged,True
+within_session_spearman_median,-0.035
+within_session_spearman_iqr,-0.157 to 0.072
+within_session_spearman_wilcoxon_p,5.325e-02
+cadence_sd_median_responder_hz,0.0150
+cadence_sd_median_nonresponder_hz,0.0169
+cadence_sd_responder_vs_nonresponder,"Mann-Whitney U 639.0, p 0.618, n = 55 and 25 sessions"
+source_script,03_figures/sup_cadence_sensitivity.py

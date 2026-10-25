@@ -1,0 +1,12 @@
+sid,cut_step1,n_cal,approve,note
+SUB_04_sess02,,,1,reviewed: rule cut
+SUB_09_sess02,,,1,reviewed: rule cut accepted as is
+SUB_12_sess01,,,1,reviewed: rule cut (item 6)
+SUB_16_sess01,,,1,reviewed: rule cut (item 6)
+SUB_22_sess01,,13,1,n_cal 11 -> 13 so the calibration task time passes 5 min (item 3)
+SUB_24_sess02,,,1,reviewed: no S11 offset 0 (item 4)
+SUB_25_sess02,,,1,reviewed: rule cut (item 6)
+SUB_28_sess01,,,1,reviewed: rule cut (item 6)
+SUB_31_sess01,,,1,reviewed: rule cut (item 6)
+SUB_36_sess02,,,1,reviewed: rule cut (item 6)
+SUB_40_sess02,,,1,reviewed: rule cut (item 6)

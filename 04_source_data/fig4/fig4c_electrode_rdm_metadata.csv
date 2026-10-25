@@ -1,0 +1,21 @@
+key,value
+producer,03_figures/fig4b_rsa_per_harmonic_k123.py
+build_id,main
+build_id_note,healthy cohort
+cohort,healthy; IW 80 / RW 80 / REST 80 sessions
+input_iw,data/decoder_output/diag_harmonic_phase_responder_split/persession_harmonic_phase_cycle9_complex.csv
+input_rw,data/decoder_output/diag_real_walking_persession/persession_harmonic_phase_cycle9_complex.csv
+input_rest,data/decoder_output/diag_rest_yoked/persession_harmonic_phase_cycle9_complex.csv
+n_sessions_iw,80
+n_sessions_rw,80
+n_sessions_rest,80
+n_channels_common,60
+n_cycle_points,9
+n_harmonics,3
+n_spin,1000
+spin_rng_seed,0
+figure,"Fig. 4 panel g - electrode representational dissimilarity matrices for RW / IW / REST, per harmonic k1/k2/k3"
+rows,"one per (harmonic_k, condition, channel_i, channel_j)"
+n_rows,32400
+value_column,"crossnobis_d, rounded to 6 decimals"
+outputs,04_source_data/fig4/fig4c_electrode_rdm_source_data.csv

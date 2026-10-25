@@ -1,0 +1,10 @@
+key,value
+paper_location,"Supplementary Note 1 (pooled trial medians; both cohorts, imagined walking vs resting-state EEG input)"
+build_id,main
+statistic,"median over TRIALS of the per-trial all-joint mean rpt_r (model calib), pooled across sessions; IQR = 25th/75th percentile over trials"
+healthy_iw_source,"04_source_data/fig2/fig2g_trial_r_long.csv column All (mean of six joints, model calib, rpt_r)"
+healthy_rest_source,"data/decoder_output/main/h_rest_testonly_trial_r_long.csv, model calib, rpt_r averaged over the six joints per trial (INPUT_CONTROL_MODE=resting_random_window_test_only, seed 20260820)"
+patient_iw_source,"04_source_data/fig5/fig5b_trial_matrix.csv, the 11 post-operative columns (post_operative)"
+patient_rest_source,"data/decoder_output/main/pat_rest_testonly/*_trial_r.csv, model calib, rpt_r averaged over six joints per trial"
+scope,"descriptive; healthy full cohort 80 sessions / 42 participants; patient n = 2, case-level"
+producer,03_figures/pooled_trial_medians.py

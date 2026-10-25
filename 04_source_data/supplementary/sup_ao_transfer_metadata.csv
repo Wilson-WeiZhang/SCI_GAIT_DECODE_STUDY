@@ -1,0 +1,10 @@
+key,value
+analysis,decoder transfer between imagined walking with observation (MI+AO) and observation only (AO)
+build_id,main
+cohort,"supplementary experiment, 6 participants (SUB_01/09/12/23/29/35), 20 scored trials per condition"
+features,"all = 360 features; k1 / k2 = the 120 features of one harmonic, PCA 30 of the restricted LSO basis"
+scoring,trial r = mean over six walker joints of calib rpt_r; trial_idx > 10 (cycles 11-30)
+statistics,"trial-level REML LME r ~ c + (1 + c | participant), c = +-0.5 (compared = +0.5), best of lbfgs / powell / cg; random-intercept fallback labelled in lme_p|random_effects"
+columns,contrast rows: reference_ = own decoder (transfer rows) or AO test trials (MI+AO vs AO rows); compared_ = transferred decoder or MI+AO test trials; lme_estimate = compared - reference
+script,03_figures/sup_ao_transfer.py
+paper_location,"Supplementary Note 2, three sentences after the observation-only-above-zero sentence: features all, both transfer directions (0.05 vs 0.55, p < 0.001, six of six; 0.24 vs 0.20, p = 0.517) and features k2 (0.12 vs 0.52, p < 0.001; 0.18 vs 0.14, p = 0.367)"

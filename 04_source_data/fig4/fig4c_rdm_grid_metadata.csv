@@ -1,0 +1,10 @@
+key,value
+panel,"Fig. 4g - cross-validated electrode RDM grid, k1/k2/k3 x RW/IW/REST"
+build_id,main
+build_id_note,"healthy cohort, 80 sessions per condition"
+rdm_source,04_source_data/fig4/fig4c_electrode_rdm_source_data.csv written by 03_figures/fig4b_rsa_per_harmonic_k123.py
+n_channels,60
+channel_order,anterior->posterior by standard_1005 y coordinate (ordering only)
+colour_scale,shared symmetric +/-2.7121 = 98th percentile of |d| over all nine matrices
+colormap,tan (#8c7a64) - white - blue (#1f4e79)
+related,panel e (03_figures/fig4_rsa_persession_spin.py) quantifies these matrices: 2nd-order Spearman of the IW vs RW upper triangles + spin null

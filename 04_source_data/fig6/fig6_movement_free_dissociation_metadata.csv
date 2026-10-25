@@ -1,0 +1,21 @@
+key,value
+figure,Fig. 6 panel h — patient movement-free task dissociation: sensorimotor-ERD bars; the gait-phase-locking |c| values (left_* rows) are in the Source Data and not drawn
+build_id,post_operative
+scope,"n=2 SCI patients, post_operative (P1 sess04-09 + P2 sess03/05/06/08/09), case-level descriptive; no population claim, no pre/post test"
+post_operative_set,pat01 sess04-09 + pat02 sess03/05/06/08/09 (11 sessions) — THE DRAWN COHORT
+pre_operative_set,"pat01 sess01/02 + pat02 sess01/02 (4 sessions) — per-session IW |c| appears in the Source Data tagged cohort=pre_operative as a descriptive extra ONLY; not drawn, not in the claim"
+excluded_not_plotted,"pat01_sess03, pat02_sess04 and pat02_sess07 (recording hardware failure)"
+left_metric,"adaptive per-cycle gait-phase-binned unit-phasor |c| at k1/k2/k3; per-task phase-shift surrogate null (1000x, one-sided p = share of surrogates >= observed); bar = chance floor (surrogate mean) + signal excess; error = across-session SEM; p = MEDIAN of the per-session surrogate p (a summary, not a group test; the manuscript reports the per-session counts in left_sessions_above_surrogate)"
+left_sessions_above_surrogate,IW k1 9/11; IW k2 10/11; IW k3 3/11; RW k1 2/7; RW k2 2/7; RW k3 2/7; S2S k1 3/8; S2S k2 3/8; S2S k3 4/8
+left_n_sessions,IW n=11; RW n=7; S2S n=8
+left_sessions_IW,"pat01_sess04, pat01_sess05, pat01_sess06, pat01_sess07, pat01_sess08, pat01_sess09, pat02_sess03, pat02_sess05, pat02_sess06, pat02_sess08, pat02_sess09"
+left_sessions_RW,"pat01_sess05, pat01_sess08, pat01_sess09, pat02_sess05, pat02_sess06, pat02_sess08, pat02_sess09"
+left_sessions_S2S,"pat01_sess05, pat01_sess07, pat01_sess08, pat01_sess09, pat02_sess03, pat02_sess05, pat02_sess08, pat02_sess09"
+right_metric,"sensorimotor ROI (21 ch C/CP/FC) ERD as dB log-ratio 10*log10(P_task/P_rest) — SAME metric and band edges as Fig.3 panel b (Mu 8-13 Hz, Beta 13-30 Hz); negative dB = desynchronization (lab convention)"
+right_n_sessions,IW n=11; RW n=7; S2S n=9
+right_task_labels,"tick labels IW / AW / S2S; AW = assisted walking, internal task code RW (the patient overt-walking task; not Fig. 4's real walking)"
+claim,"movement-free IW = a cleanly measurable cortical motor process; patient overt movement (RW/S2S) yields NO interpretable neural readout — RW at its surrogate floor at every harmonic, S2S non-cyclic, both sign-inverted in mu/beta. This is a statement about MEASURABILITY, not evidence the brain lacks a real-walking representation, and not an attribution to movement artifact. Case-level, no population claim."
+style,"unified Fig.3/4 style: Arial 13 pt base, axes.linewidth 2.2, tick width 2.2, top/right spines off, harmonics as mathtext k1/k2/k3, 300 dpi PNG, no in-figure title, no panel letter"
+input_task3_csv,data/decoder_output/diag_task3_adaptive_ovr_nsur1000/task3_adaptive.csv
+input_erd_csv,data/decoder_output/diag_erd_similarity_ovr/erd_roi.csv
+output_png,figures_out/fig6/fig6_movement_free_dissociation.png

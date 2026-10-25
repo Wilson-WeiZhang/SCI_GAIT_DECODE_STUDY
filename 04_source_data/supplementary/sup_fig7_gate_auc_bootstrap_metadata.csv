@@ -1,0 +1,8 @@
+key,value
+figure,"Supplementary Fig. 1d (panel file S1f_gate_auc_bootstrap.png) — bootstrap distributions of the gate mean AUC under the two decision-window conventions (fixed 3 s tiling vs random 3 s moment), fuse2 V1."
+build_id,main
+gate_set,post_operative (11 sessions)
+columns,"one column per score x convention; each row is one bootstrap draw's mean-of-11-sessions AUC (B = 1000, seed 0)."
+tiled,"0.9143 [0.8946, 0.9324]"
+moment,"0.9102 [0.8840, 0.9327]"
+producer,03_figures/fig7_gate_roc.py (same run as fig7_gate_roc_source_data.csv)

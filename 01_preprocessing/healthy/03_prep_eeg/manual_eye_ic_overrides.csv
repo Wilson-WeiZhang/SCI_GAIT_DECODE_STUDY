@@ -1,0 +1,5 @@
+session,ic_index,reason,source,date_day_index
+SUB_31_sess01,16,lateral eye movement; NO-OP: max_artifact 0.8318 is ABOVE the 0.80 gate so ICLabel already rejected it,manual_visual,0
+SUB_33_sess01,5,lateral eye movement; ,manual_visual,0
+SUB_33_sess01,6,lateral eye movement; FORCED: max_artifact 0.0258 is below the 0.80 gate,manual_visual,0
+SUB_35_sess01,7,lateral eye movement; NO-OP: max_artifact 0.8896 is ABOVE the 0.80 gate so ICLabel already rejected it,manual_visual,0

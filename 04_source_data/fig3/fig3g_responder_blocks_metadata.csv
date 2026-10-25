@@ -1,0 +1,16 @@
+key,value
+figure,"Fig. 3 panel g - responder | non-responder blocks side by side, each 3 harmonics x 5 gait-phase points (0/25/50/75/100% of the cycle)"
+producer,03_figures/fig3g_responder_blocks.py
+build_id,main
+cohort,healthy; n_cohort = 80 sessions in the .mat
+input_maps,04_source_data/fig3ch_eeglab_maps.mat
+input_maps_exporter,03_figures/fig3_export_for_eeglab.py
+input_montage_set,data/prep_data/healthy/eeg/SUB_37_sess02_step2.set
+n_cohort,80
+n_responder,55
+n_non_responder,25
+n_channels,60
+harmonics,1; 2; 3
+cycle_fractions,0; 0.125; 0.25; 0.375; 0.5; 0.625; 0.75; 0.875; 1
+clim_abs,0.13267315345676295
+outputs,figures_out/fig3/fig3g_responder_blocks.png; figures_out/fig3/fig3g_responder_blocks_colorbar.png

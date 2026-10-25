@@ -1,0 +1,15 @@
+key,value
+figure,"Fig. 2 panel h - inter-joint coordination cyclograms (hip-knee / hip-ankle / knee-ankle), phase-coloured"
+producer,03_figures/fig2_cyclogram.py
+build_id,main
+cohort,healthy; 80 sessions present in the input dump
+input,data/decoder_output/main/abd_cohort_main.npz
+n_sessions_in_dump,80
+n_cycle_bins,50
+pairing_rule,"per-pair finite-curve filter: a session enters a cyclogram only when BOTH joints of that pair are present, so each panel carries its own n"
+normalisation,"each loop z-scored separately on x and y (unit scale), so the panel compares shape/phase, not amplitude"
+ci_band,"session-level 95% CI = 1.96*SD/sqrt(n), half-width projected onto the local loop normal, drawn as a translucent band (not discrete ellipses)"
+outputs,figures_out/fig2/main/f2_panelD_cohort_cyclogram.png; figures_out/fig2/main/f2_panelD_cyclogram_LHip_LKnee.png; figures_out/fig2/main/f2_panelD_cyclogram_LHip_LAnk.png; figures_out/fig2/main/f2_panelD_cyclogram_LKnee_LAnk.png; figures_out/fig2/main/f2_panelD_cyclogram_colorbar.png
+n_paired_sessions_LHip-LKnee,79
+n_paired_sessions_LHip-LAnk,73
+n_paired_sessions_LKnee-LAnk,72

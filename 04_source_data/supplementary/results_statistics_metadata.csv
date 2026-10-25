@@ -1,0 +1,22 @@
+key,value
+build_id,main
+producer,03_figures/results_statistics.py
+paper_location,Main text Results statistics; derived only from existing Source Data files
+bh_method,statsmodels.stats.multitest.multipletests method=fdr_bh alpha=0.05
+bootstrap,"percentile, B=10000, numpy default_rng seed 20260930 (one stream, items in script order); copied CIs keep their own B/seed as stated in the row note"
+rank_biserial,"matched pairs (T+ - T-)/(T+ + T-), zeros dropped; positive = first-named larger"
+fisher_z_ci,tanh(atanh(r) +- 1.959964/sqrt(n-3))
+ci_columns_note,"rows labelled 'median [IQR]' carry the IQR, not a CI, in ci_lo/ci_hi"
+upstream_rerun,"none: no prep, decoder or simulation re-run"
+family_F8,Fig. 3i: six questionnaire items vs k1 locking excess; BH over 6 (as stored)
+family_F10a,Fig. 4d: Rayleigh tests k1/k2/k3; BH over 3 (as stored)
+family_F10b,"Fig. 4e: cohort-mean spin tests k1/k2/k3, one-sided; BH over 3 (as stored)"
+family_F10c,"Fig. 4f: amplitude pairs k2-k1, k2-k3, k1-k3 Wilcoxon; BH over 3 (reproduces stored q)"
+family_F11,Fig. 5h: IW diag vs off-diag (n=9) and diag IW vs REST paired (n=7); BH over 2
+family_F12,"Fig. 6b: session-mean excess vs 0, k1/k2/k3; BH over 3. Trial counts: BH within harmonic over 449 trials"
+family_F13,"Fig. 6d: matching-harmonic channel-shuffle p (bounded at 1/1001), k1/k2/k3; BH over 3"
+family_F14,Fig. 6h: ERD vs 0 for IW/RW/S2S x mu/beta; BH over 6. Phase-lock sessions: BH within harmonic over 11 sessions
+family_F15-displacement,Fig. 7c: first 7 rows of fig7_sim_trajectories_stats.csv (p_used); BH over 7
+family_F15-cadence,Fig. 7d: fig7_sim_cadence_stats.csv 3 rows (p_used); BH over 3
+family_F15-asymmetry,Fig. 7e: fig7_sim_step_symmetry_stats.csv 3 rows (p_used); BH over 3
+fig7_source,F15 rows read from the Fig. 7 Source Data of the published simulation build (GAIT_F7_SIM=causal_from2s); all other rows from the decoder and decoder-independent Source Data in 04_source_data/

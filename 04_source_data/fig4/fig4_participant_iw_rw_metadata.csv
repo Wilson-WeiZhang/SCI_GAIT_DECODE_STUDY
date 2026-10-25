@@ -1,0 +1,11 @@
+key,value
+figure,"Fig. 4 panel i - participant-level imagined-walking r vs real-walking r (42 participants), healthy cohort"
+build_id,main
+producer,03_figures/sup_fig4_participant_iw_rw.py
+output,figures_out/fig4/main/fig4_participant_iw_rw.png
+input,fig4_decoding_gain_source_data.csv (not distributed) (fig4_decoding_gain.py)
+r_convention,"per-participant mean of that participant's per-session TRIAL MEDIANS (per-session median over trials of the six-joint trial r; the input's subject_unit), i.e. the Fig. 4b convention"
+spearman_rho,0.3231
+spearman_p,0.0369
+n_participants,42
+band,dashed OLS fit + 95% percentile band over 1000 bootstrap resamples of the participants (seed 0); values in fig4_participant_iw_rw_fit.csv

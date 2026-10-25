@@ -1,0 +1,56 @@
+key,value
+panel,"Fig. 4 panel h - cyclic IW x RW phase-lag profile with a continuous phase-offset fit (main panel figures_out/fig4/fig4_phase_lag_profile.png, Source Data fig4_phase_lag_profile_*)"
+build_id,main
+cohort,"healthy cohort (80 sessions / 42 participants); session-equal complex maps"
+n_sessions_IW,80
+n_sessions_RW,80
+n_sessions_note,same 80 sessions in both conditions; bootstrap resamples them PAIRED
+n_channels,60
+n_sessions_dropped,0
+n_channels_dropped,0
+input_IW,data/decoder_output/diag_harmonic_phase_responder_split/persession_harmonic_phase_cycle9_complex.csv
+input_RW,data/decoder_output/diag_real_walking_persession/persession_harmonic_phase_cycle9_complex.csv
+cycle_points,"0;0.125;0.25;0.375;0.5;0.625;0.75;0.875 (the 9th, 100 %, column is a repeat of 0 % and is dropped)"
+dup_column_max_abs_diff,0
+reference_phase_rad,"-2.193821 (RW map's own unified reference = panel-b polarity; applied to BOTH conditions, held fixed across bootstrap and permutation)"
+cell,Pearson r across the 60 channels between Re(c_IW(phi_IW) e^-i ref) and Re(c_RW(phi_RW) e^-i ref)
+lag_profile,"mean of cells at cyclic lag delta = (phi_IW - phi_RW) mod 1, over the 8 unique phases; bin = 12.5 % cycle"
+model,"M_k(i,j) = A_k cos(2 pi k (phi_i - phi_j) - Delta_k) + b_k, ordinary least squares on [cos, sin, 1] over all 64 cells"
+fitted_curve,"the plotted line is this closed form sampled at 401 points over one full cycle of lag; reproduce from A, Delta, b below"
+Delta_convention,"Delta_pct_cycle = Delta_rad / (2 pi k) x 100, wrapped to (-50/k, +50/k]; the fitted ridge is phi_IW = phi_RW + Delta_pct/100 (mod 1/k), i.e. positive Delta = the IW map matches the RW map at an IW phase that many % LATER in the cycle than the RW phase"
+n_boot,1000
+n_perm,1000
+seed_bootstrap,0
+seed_permutation,1
+bootstrap,"resample the 80 sessions with replacement (paired IW/RW), recompute the session-equal maps, matrix and fit; 95 % percentile CI, Delta percentiles taken after wrapping onto the point estimate"
+permutation_null,"random permutation of the 8 RW cycle-point labels (columns of M), refit A; P = (1 + #null >= A_obs) / (n_perm + 1); tests whether the IW-RW correspondence carries harmonic-k structure at all"
+k1_A,0.354307
+k1_A_CI95_lo,0.256908
+k1_A_CI95_hi,0.424692
+k1_A_perm_P,0.016983
+k1_Delta_pct_cycle,27.7876
+k1_Delta_CI95_lo,22.031
+k1_Delta_CI95_hi,35.2871
+k1_Delta_deg_harmonic,100.035
+k1_b,-1.2e-05
+k1_R2,0.4131
+k2_A,0.72223
+k2_A_CI95_lo,0.609577
+k2_A_CI95_hi,0.776816
+k2_A_perm_P,0.002997
+k2_Delta_pct_cycle,-13.885
+k2_Delta_CI95_lo,-15.5889
+k2_Delta_CI95_hi,-12.7002
+k2_Delta_deg_harmonic,-99.972
+k2_b,1e-06
+k2_R2,0.5153
+k3_A,0.577565
+k3_A_CI95_lo,0.354611
+k3_A_CI95_hi,0.65821
+k3_A_perm_P,0.000999
+k3_Delta_pct_cycle,-11.0389
+k3_Delta_CI95_lo,-13.6549
+k3_Delta_CI95_hi,-8.7177
+k3_Delta_deg_harmonic,-119.22
+k3_b,1e-06
+k3_R2,0.4827

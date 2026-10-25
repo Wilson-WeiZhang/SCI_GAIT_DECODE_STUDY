@@ -1,0 +1,7 @@
+key,value
+window_s,3
+figure,"Supplementary Fig. 1d (gate AUC bootstrap; the tiled MEAN11 AUC row is also the gate AUC of the Results) — ROC of the input-side rest/IW gate, one curve per post-operative session, fuse2 V1 scores on 3 s zero-overlap decision windows. No in-figure text; legend is a separate PNG."
+headline_ci,"95% CI 0.8946–0.9324; event-level stratified (session x label) bootstrap, B = 1000, seed 0, percentile interval, fixed scores, model not refit."
+cohort,"post_operative: P1 sess04/05/06/07/08/09 and P2 sess03/05/06/08/09; the gate reads no kinematic quantity, so all 11 sessions enter. n = 2 patients, case-level."
+build_id,main
+producer,03_figures/fig7_gate_roc.py

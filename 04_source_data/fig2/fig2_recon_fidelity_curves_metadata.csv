@@ -1,0 +1,18 @@
+key,value
+figure,"Fig. 2 panel f - cohort cycle-averaged reference (dashed) vs decoded z-scored LHip / LKnee / LAnk angles across the gait cycle, 95% CI shading across sessions"
+producer,03_figures/fig2_recon_fidelity.py
+build_id,main
+input,data/decoder_output/main/abd_cohort_main.npz
+n_cycle_bins,50
+col_joint,"left-limb joint (LHip, LKnee, LAnk)"
+col_series,"reference (goniometer, dashed line) or decoded (colour line)"
+col_gait_cycle_pct,"gait-cycle position (%), x of the plotted curve"
+col_mean,session-level cohort mean of the z-scored cycle-averaged angle
+col_ci_lower,"mean - 1.96*SD/sqrt(n_sessions), lower edge of the shaded band"
+col_ci_upper,"mean + 1.96*SD/sqrt(n_sessions), upper edge of the shaded band"
+n_sessions_LHip_reference,80
+n_sessions_LHip_decoded,80
+n_sessions_LKnee_reference,79
+n_sessions_LKnee_decoded,79
+n_sessions_LAnk_reference,73
+n_sessions_LAnk_decoded,73

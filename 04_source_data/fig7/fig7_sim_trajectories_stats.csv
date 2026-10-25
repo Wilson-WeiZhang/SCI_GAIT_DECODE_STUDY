@@ -1,0 +1,5 @@
+comparison,median_difference,p_fdr_bh,star_drawn
+Walker_vs_zero,3.411235,7.24439e-112,***
+Decoded_vs_zero,2.398980,6.42642e-58,***
+CoordinationNull_vs_zero,-0.042355,0.394288,ns
+InPhaseNull_vs_zero,-3.153805,3.88992e-236,***

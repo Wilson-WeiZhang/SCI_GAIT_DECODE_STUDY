@@ -1,0 +1,12 @@
+key,value
+ci_method,"1000-resample session bootstrap, rng seed 0"
+cohort,main healthy cohort
+colour_semantic,blue #00568A = BH-FDR q<0.05 (k1-k3) or uncorrected p<0.05 (ERD); grey = not significant
+build_id,main
+erd_p,uncorrected
+fdr_family,k1-k3
+input,04_source_data/fig3/fig3_master_source_data.csv + fig3_def_resnonres_source_data.csv
+n_participants,42
+n_sessions,80
+panel,"Fig. 3 panel c - specificity forest rho(decoding r, |c|) for k1/k2/k3 and mu/beta ERD; the same script also writes the panel f carrier scatter"
+unit_of_analysis,session

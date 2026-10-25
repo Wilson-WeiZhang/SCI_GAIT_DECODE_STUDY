@@ -1,0 +1,15 @@
+key,value
+figure,"no panel (Source Data only). Whole-trial gate-state timeline on the concatenated valid imagined-walking + rest stream. Upper band = instructed state, lower band = gate state under rule S1. One row per session; a separate excerpt PNG and a separate legend PNG. No in-figure title, no in-figure statistics."
+gate_set,"post_operative (11 sessions: pat01_sess04, pat01_sess05, pat01_sess06, pat01_sess07, pat01_sess08, pat01_sess09, pat02_sess03, pat02_sess05, pat02_sess06, pat02_sess08, pat02_sess09)"
+cv,"within-session 10-fold by event (seed 0), fold-internal reference -- every imagined-walking and rest event is scored exactly once, out-of-fold; the reference, both classifiers, the z map and the thresholds come from that fold's 9 training folds."
+window_s,3
+score_column,"e_sigma -- the drawn state machine runs on the fold-standardised score, so the thresholds are the uniform (0, +1, -1) in units of each decision own delta; the per-fold (theta_sym, delta) spread is in fig7_gate_accuracy_source_data.csv (row_type=fold_thresholds)."
+karcher_solver,"checked (step-halving fixed point, tol 1e-10, itmax 20000)."
+rule_S1,"symmetric single-window open/close: open at the first decision with s(t) >= theta_on, close at the first decision with s(t) < theta_off; no counting, no dwell, no minimum bout. IW events start CLOSED, rest events start OPEN. Identical function to 03_figures/fig7_gate_accuracy_table.py."
+not_scored,The first 3 s of every event carry no decision and are drawn in NULL_FILL.
+excerpt,"pat01_sess09, concatenated t = 0-180 s (180 s), 12 imagined-walking and 12 rest events."
+open_time_in_iw,"20.59 min of gate-open time inside 37.01 min of instructed imagined walking."
+input,"02_decoding/simulation/result/main/gate_within_session_scores_T3.csv + 02_decoding/simulation/result/main/gate_within_session_thresholds_T3.csv + 02_decoding/simulation/result/main/gate_within_session_events.csv (event onsets, used only to put the evaluated events back into true chronological order)."
+cohort,"n = 2 patients, case-level."
+build_id,main
+producer,03_figures/fig7_gate_timeline.py

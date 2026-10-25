@@ -1,0 +1,33 @@
+key,value
+panel,"Fig. 4b (paired IW vs RW session plot) and Fig. 4c (|c| -> r scatter), trial-median convention"
+r_convention,trial_median
+r_convention_definition,per trial: nanmean of calib rpt_r over the 6 joints; per session: median over trials (identical to 03_figures/fig2g_trial_r_export.py 'All')
+build_id,main
+iw_input,h_iw_trial_r_long.csv
+rw_input,h_rw_trial_r_long.csv
+iw_joints,LAnkW X LHipW X LKneW X RAnkW X RHipW X RKneW X
+rw_joints,LAnkS X LHipS X LKneS X RAnkS X RHipS X RKneS X
+cohort,"80 sessions / 42 participants (healthy, full cohort)"
+n_trials_iw_total,3172
+n_trials_rw_total,3169
+cohort_median_of_session_medians_iw,0.465586
+cohort_median_of_session_medians_rw,0.883215
+cohort_pooled_trial_median_iw,0.460905
+cohort_pooled_trial_median_rw,0.877259
+cohort_mean_of_session_medians_iw,0.455288
+cohort_mean_of_session_medians_rw,0.864865
+sessions_rw_gt_iw,80/80
+sessions_wilcoxon_W,0.0
+sessions_wilcoxon_p,7.850e-15
+sessions_paired_t,18.954
+sessions_paired_t_df,79
+sessions_paired_t_p,4.002e-31
+participants_unit,per-participant mean of that participant's session medians
+participants_n,42
+participants_rw_gt_iw,42/42
+participants_wilcoxon_W,0.0
+participants_wilcoxon_p,4.547e-13
+participants_paired_t,15.382
+participants_paired_t_df,41
+participants_paired_t_p,1.253e-18
+tests_note,"all tests two-sided; Wilcoxon signed-rank is the headline (medians), the paired t is reported for reference only"

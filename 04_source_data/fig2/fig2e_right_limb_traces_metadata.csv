@@ -1,0 +1,4 @@
+source,session,trial_ordinal,trial_idx,joint,pred_field,r,build_id,panel,paired_panel,window_start_s,window_end_s,split_s,r_first_half,r_second_half
+data/decoder_output/main/h_iw_dump/subj27_sess01_dump.h5,subj27_sess01,5,45,RHipW X,C_pred,0.5032911872193522,main,Fig. 2e,"Fig. 2d (same trial, left limb)",4.000,9.344,6.672,0.584667,0.418931
+data/decoder_output/main/h_iw_dump/subj27_sess01_dump.h5,subj27_sess01,5,45,RKneW X,C_pred,0.5193727852141771,main,Fig. 2e,"Fig. 2d (same trial, left limb)",4.000,9.344,6.672,0.528094,0.541536
+data/decoder_output/main/h_iw_dump/subj27_sess01_dump.h5,subj27_sess01,5,45,RAnkW X,C_pred,0.44735462121908476,main,Fig. 2e,"Fig. 2d (same trial, left limb)",4.000,9.344,6.672,0.488060,0.433017

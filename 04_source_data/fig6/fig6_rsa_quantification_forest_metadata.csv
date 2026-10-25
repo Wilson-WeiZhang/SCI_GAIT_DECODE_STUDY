@@ -1,0 +1,25 @@
+key,value
+figure,"Fig. 6 panel f - patient-vs-healthy IW spatial-RSA panel: observed rho as a single-size dot over its full spin-null violin, per harmonic (k1/k2/k3) x patient (P1/P2); quantifies the electrode-RDM grid figures_out/fig6/fig6_rsa_rdm_grid.png"
+build_id,main
+patient_dump,diag_patient_harmonic_phase
+healthy_iw_dump,diag_harmonic_phase_responder_split
+healthy_rest_dump,diag_rest_yoked_harmonic_phase
+metric,2nd-order spatial RSA rho: patient-IW electrode harmonic-phase RDM vs healthy-IW RDM
+null,"spin test = rotated electrode geometry (preserves spatial autocorrelation, conservative). The 1000-value distribution is DRAWN as a 10th-90th box-whisker per item (Q1-Q3 box + median, whiskers to p10/p90, no fliers), with the 95th pct as a dashed critical line on top. All 1000 values remain in fig6_rsa_quantification_forest_spin_nulls.csv; the drawn summary is in fig6_rsa_quantification_forest_null_box_stats.csv. Shuffle p is kept in the Source Data for completeness but is anti-conservative for spatial maps and is not drawn."
+control,"resting control (patient IW vs healthy yoked-REST): only its OWN spin-null box-whisker is drawn, offset +0.30 x-units (0.7x width, white fill, lighter line work) - deliberately subordinate to the main box. The resting-control rho itself is not drawn (it is in the Source Data). NO p95 dash is drawn on it: the control carries no significance claim."
+control_spin_rng,"the resting-control spin null uses its own generator numpy default_rng(20260826), created only after the producer's loop finishes and consumed in the order k=1,2,3 x (P1,P2).  Same machinery otherwise: the producer's own spin_null(), N=1000, healthy-REST RDM as reference."
+control_spin_percentile_k1_P1,"rest rho +0.0919 sits at percentile 70.1 of its own spin null; two-sided empirical P = .599; null 2.5-97.5 pct [-0.1895, +0.2132] -> inside the central range"
+control_spin_percentile_k1_P2,"rest rho +0.0155 sits at percentile 57.3 of its own spin null; two-sided empirical P = .855; null 2.5-97.5 pct [-0.1675, +0.2540] -> inside the central range"
+control_spin_percentile_k2_P1,"rest rho -0.0477 sits at percentile 63.5 of its own spin null; two-sided empirical P = .731; null 2.5-97.5 pct [-0.2789, +0.1633] -> inside the central range"
+control_spin_percentile_k2_P2,"rest rho -0.0508 sits at percentile 66.0 of its own spin null; two-sided empirical P = .681; null 2.5-97.5 pct [-0.2988, +0.2124] -> inside the central range"
+control_spin_percentile_k3_P1,"rest rho +0.0234 sits at percentile 57.1 of its own spin null; two-sided empirical P = .859; null 2.5-97.5 pct [-0.3456, +0.3473] -> inside the central range"
+control_spin_percentile_k3_P2,"rest rho -0.1742 sits at percentile 19.4 of its own spin null; two-sided empirical P = .390; null 2.5-97.5 pct [-0.3450, +0.3287] -> inside the central range"
+scope,"n=2 SCI patients, case-level, post-operative (post_operative); P1 n=6 sessions, P2 n=5. NOT a population claim."
+post_operative_set,P1 = pat01 sess04-09 (6); P2 = pat02 sess03/05/06/08/09 (5)
+marker_semantics,"every observed-rho marker is the same filled circle, 4.4 pt with a dark edge and a white halo, filled in the patient colour of Fig. 5b: Patient 1 #D3B8A2 (tan), Patient 2 #E5E7CD (pale olive), for all harmonics. There is no size encoding, no shape encoding and no significance colour encoding - significance is carried ONLY by the symbol row and by whether the dot sits above its dashed 95th-pct line. Patient identity is carried by the fill colour and the x tick label. The resting control has no marker (its box only)."
+n_tests,"6 (3 harmonics x 2 patients); BH step-up, two-sided-equivalent one-sided spin p values as computed by the producer's spin_null()"
+harmonics_passing_spin_bh,k2 (BH-corrected across the 6-test family; this is the reportable set)
+result_k1_k3,k1 P1 rho=0.1326 spin p=0.4615 p_BH=0.5538 (ns); k1 P2 rho=0.4038 spin p=0.0410 p_BH=0.0820 (ns); k3 P1 rho=0.0926 spin p=0.3816 p_BH=0.5538 (ns); k3 P2 rho=-0.2101 spin p=0.8671 p_BH=0.8671 (ns)
+claim,"channel-space RSA, not source localization"
+output_png,figures_out/fig6/fig6_rsa_quantification_forest.png
+output_png_legend,figures_out/fig6/fig6_rsa_quantification_forest_legend.png

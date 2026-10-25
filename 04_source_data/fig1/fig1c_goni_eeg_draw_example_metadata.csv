@@ -1,0 +1,8 @@
+key,value
+figure,Fig. 1 panel c
+build_id,main
+session,subj30_sess01
+highlighted_trial,21
+goni_srate_hz,250
+channels,LHipW X;RHipW X;LKneW X;RKneW X;LAnkW X;RAnkW X
+display_polarity,"RHipW X,LKneW X,LAnkW X x(-1): L/R sign harmonization for plotting only; decoding z-scores (Y_delta), unaffected"

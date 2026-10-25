@@ -1,0 +1,20 @@
+key,value
+figure,Supplementary Fig. 1a-c (Decoding controls and chance level)
+table,"none - no table carries these values; Supplementary Table 2 'Decoder parameters and control analyses' defines each control, and the healthy-cohort values are reported in Supplementary Note 1 and Supplementary Fig. 1a-c, per-session values in this Source Data"
+note,Supplementary Note 1
+build_id,main
+cohort,"healthy cohort,  causal prep (01_preprocessing/causal/healthy/: minimum-phase anti-aliasing and 0.1-40 Hz band-pass, bad channels / ICA / ICLabel from a calibration recording applied forward)"
+n_sessions,80
+n_subjects,42
+scope,"full-cohort healthy (session-level, session-equal weighting)"
+metric,rpt_calib (calibrated per-trial reconstruction r); session = mean of the finite fold x joint cells (10 folds x 6 joints)
+test,"two-sided Wilcoxon signed-rank across sessions, real vs each null (paired)"
+labelshuffle_selfcheck,max |rpt_calib_true - mainline session mean| = 9.090e-08 at subj21_sess01 (guard 1e-5)
+label_shuffle_n_perm,200
+label_shuffle_seed,20260905
+condition_zero_eeg,no healthy cohort product (patient condition only)
+condition_real,RUN | Real imagined-walking EEG - the reported decoder (mainline). | source h_iw_session_summary.csv
+condition_rest_input,"RUN | Resting-window EEG at test: test-fold trial EEG replaced by a contiguous, equally long window from that session's own resting trials; training folds, goniometer targets and fold assignment unchanged. | source h_rest_testonly_session_summary.csv"
+condition_label_shuffle,"RUN | Target-label shuffle: post-fit permutation of the held-out target trajectories across trials, no refit; 200 permutations per fold. | source h_labelshuf/per_session.csv"
+condition_cadence_shuffle,"RUN | Cadence-shuffle null: within-trial circular shift of the EEG relative to its gait target (both spectra preserved), decoder refit. | source h_cadshuf_session_summary.csv"
+outputs,"supplementary/sup_decoding_controls.png (default mode) or supplementary/_panels/S1{a,b,c}_decoding_controls.png (SI_PANEL_SPEC=panel); 04_source_data/sup_decoding_controls_{source_data,metadata}.csv; 04_source_data/sup_decoding_controls_table_{source_data,metadata}.csv"

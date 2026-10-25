@@ -1,0 +1,26 @@
+key,value
+panel,Fig. 6e - patient<->healthy IW representational similarity: cross-validated electrode RDM grid (rows k1/k2/k3 x cols Healthy IW / P1 / P2) + 2nd-order spatial RSA with spin/shuffle nulls
+build_id,main
+patient_dump,diag_patient_harmonic_phase
+healthy_iw_dump,diag_harmonic_phase_responder_split
+healthy_rest_dump,diag_rest_yoked_harmonic_phase
+scope,"n=2 SCI patients, post-operative, case-level, descriptive; NOT a population claim"
+post_operative_set,P1 = pat01 sess04-09 (6); P2 = pat02 sess03/05/06/08/09 (5)
+pre_operative_set,"pat01 sess01/02 + pat02 sess01/02 - present in the dump, NOT used here"
+cohort_selection,"EXPLICIT session lists, not an id-prefix match"
+electrodes,60
+cycle_points,9
+healthy_IW_sessions,80
+healthy_REST_sessions,80
+P1_sessions,6
+P2_sessions,5
+metric,"electrode-electrode crossnobis RDM (gait-phase re+im features), 2nd-order Spearman RSA of each patient RDM vs the healthy-IW RDM (upper triangle)"
+spin_N,1000
+shuffle_N,5000
+null_note,"SPIN = rotational electrode permutation, preserves spatial autocorrelation, CONSERVATIVE and the reportable null; SHUFFLE = plain electrode-label permutation, anti-conservative for spatial maps, reported for completeness only"
+rest_control,healthy yoked-REST RDM; a low or negative rest_rho is the IW-specificity check
+electrode_order,"anterior->posterior by standard_1005 y coordinate, one order for all matrices; ORDERING ONLY - no topomap is drawn, so no electrode position is plotted"
+colour_scale,shared symmetric +/-7.500002
+claim,"channel-space RSA, not source localization: the step-harmonic k2 IW representation reproduces the healthy spatial structure in each patient above the conservative spin null; k1 and k3 do not. Case-level."
+consumed_by,03_figures/fig6_rsa_quantification_forest.py
+output_png,figures_out/fig6/fig6_rsa_rdm_grid.png

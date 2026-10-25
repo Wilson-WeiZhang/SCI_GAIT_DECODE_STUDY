@@ -1,0 +1,16 @@
+key,value
+panel,"Fig. 3 panel d - paired per-session k1 |c|, imagined walking vs resting control"
+build_id,main
+build_id_note,"main (healthy cohort, ; zero-phase neural tag); full-sample |c| per session"
+input,04_source_data/fig3/fig3_master_source_data.csv
+n_sessions,80
+n_participants,42
+IW_median,0.1121
+IW_IQR,0.0787-0.1505
+rest_median,0.0593
+rest_IQR,0.0505-0.0688
+median_difference,0.0467
+median_difference_CI95,"0.0399-0.0600 (percentile bootstrap over sessions, B = 1000, seed 0)"
+wilcoxon_W,130.0
+wilcoxon_p,8.9e-13
+n_IW_greater_than_rest,71

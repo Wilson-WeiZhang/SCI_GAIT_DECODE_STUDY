@@ -1,0 +1,22 @@
+key,value
+analysis,"patient trial-level brain-behaviour LME (Mundlak within/between), RAW |c|; healthy reference"
+build_id,main
+patient_c_input,data/decoder_output/patient_pertrial_c.csv
+patient_r_input,data/decoder_output/main/pat_trial_r_long.csv
+healthy_c_input,data/decoder_output/persession_pertrial_c_main.csv
+healthy_r_input,data/decoder_output/main/h_iw_trial_r_long.csv
+predictor,c_mi = per-trial gait-phase-locking magnitude (k1/k2/k3); RAW (no de-chance)
+outcome,"per-trial decode r (model=='calib', all-joint mean)"
+healthy_model,"decode_r ~ within_c + between_c; groups=subject + session nested vc (healthy cohort, 42 subjects,  causal prep (01_preprocessing/causal/healthy/: minimum-phase anti-aliasing and 0.1-40 Hz band-pass, bad channels / ICA / ICLabel from a calibration recording applied forward))"
+patient_model,decode_r ~ within_c + between_c; groups=session (n=2 subjects -> session RE); post_operative
+post_operative_set,pat01 sess04-09 + pat02 sess03/05/06/08/09 (11 sessions)
+healthy_N,42 subj / 80 sess / 3172 trial per harmonic
+patient_N,2 patients / 11 sess / 282 trial per harmonic
+within_b_healthy,k1 b=0.0985; k2 b=0.1589; k3 b=0.0944
+within_p_healthy,k1 p=6.57e-02; k2 p=6.49e-03; k3 p=2.03e-01
+within_b_patient,k1 b=-0.0626; k2 b=-0.0845; k3 b=-0.0129
+within_p_patient,k1 p=0.711; k2 p=0.577; k3 p=0.948
+marker_semantics,"DATA-DRIVEN from within_p: filled = p<.05, open = n.s.; healthy #7a7a7a, patient #962014"
+scope,"n=2 SCI patients, case-level, post-operative, descriptive; NOT a population claim"
+paper_location,No panel of its own: input table of Fig. 6g (the patient within-session k2 slope read by 03_figures/fig6_locking_vs_transfer.py)
+source_script,03_figures/fig5g_patient_trialwise_lme.py

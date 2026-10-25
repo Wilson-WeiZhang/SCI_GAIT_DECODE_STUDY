@@ -1,0 +1,9 @@
+field,value
+build_id,main
+build_id_note,"healthy cohort, causal complex-demodulation decoder with a causal 6 Hz low-pass on the stage-1 output (random 10-fold readout)"
+iw_source,data/decoder_output/main/h_iw_trial_r_long.csv
+rest_source,data/decoder_output/main/h_rest_testonly_trial_r_long.csv
+aggregation,"model=calib, rpt_r; per-trial mean over the joints of a group; per-session median over trials (identical to fig2g_trial_r_export.py)"
+test,two-sided Wilcoxon signed-rank on the 80 session-median pairs
+quoted_in_main_text,the Results Fig. 2 paragraph quotes the resting-input median of session medians (headline_session_medians_source_data.csv; pooled trial median: cohort_trial_medians) and compares imagined-walking with resting input by a trial-level linear mixed-effects model (sup_restinput_trial_lme_metadata.csv)
+rest_condition_note,"the resting-input condition's cohort median is +0.0146 (median of session medians; +0.0112 pooled over trials); whether the correspondence-matrix diagonal differs from zero is recorded in fig2e_correspondence_metadata.csv, rest_vs_zero"

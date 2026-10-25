@@ -1,0 +1,10 @@
+key,value
+ERD_sign,mu/beta_erd_mean negative = desynchronization (stronger classic MI marker)
+Q6_def,Q6_avoid = self-reported avoidance of imagery during REST (higher = better imagery control)
+build_id,main
+excess_def,excess_k = mi_k - rest_k (yoked-REST trial-matched chance floor)
+locking_metric,"unit-phasor gait-phase concentration |c|, amplitude divided out, decoder-independent"
+n_sessions,80
+n_subjects,42
+n_with_Q6,76
+rest95_floor_k1,0.094908

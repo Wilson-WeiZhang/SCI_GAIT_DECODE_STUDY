@@ -1,0 +1,14 @@
+key,value
+figure,Fig. 2 panel f - per-joint phase fidelity: LHip / LKnee / LAnk reference-vs-decoded cycle-averaged curves (3 separate panels)
+producer,03_figures/fig2_recon_fidelity.py
+build_id,main
+cohort,healthy; 80 sessions present in the input dump
+input,data/decoder_output/main/abd_cohort_main.npz
+n_sessions_in_dump,80
+n_cycle_bins,50
+aggregation,"session-level cohort mean with 95% CI = 1.96*SD/sqrt(n_valid); joints are dropped per joint, so each panel carries its own n"
+percycle_r_statistic,"median [p25, p75] over sessions"
+outputs,figures_out/fig2/main/f2_panelA_cohort_LHip.png; figures_out/fig2/main/f2_panelA_cohort_LKnee.png; figures_out/fig2/main/f2_panelA_cohort_LAnk.png; 04_source_data/fig2/fig2_recon_fidelity_source_data.csv
+n_sessions_LHip,80
+n_sessions_LKnee,79
+n_sessions_LAnk,73

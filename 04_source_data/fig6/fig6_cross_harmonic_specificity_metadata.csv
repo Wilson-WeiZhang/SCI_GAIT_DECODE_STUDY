@@ -1,0 +1,10 @@
+key,value
+build_id,main
+cohort,post_operative
+patient_diag_tag,diag_patient_harmonic_phase
+healthy_diag_tag,diag_harmonic_phase_responder_split
+metric,abs complex spatial coherence over ch x cyclepoint maps; identical to fig6_patient_healthy_harmonic_similarity.py
+diagonal_frozen_check,matches fig6_patient_healthy_harmonic_similarity_source_data.csv group rows to 1e-6 (asserted at render)
+scope,"n=2 SCI patients, case-level, descriptive; decode-independent"
+claim_note,k2 match harmonic-specific in both directions; off-diagonal max 0.078651
+paper_location,Fig. 6 panel d

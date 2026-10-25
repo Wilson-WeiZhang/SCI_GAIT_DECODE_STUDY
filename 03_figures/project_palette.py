@@ -1,0 +1,57 @@
+"""Shared figure settings
+
+Project-wide figure colors
+
+Imported by the figure scripts; it renders no panel of its own.
+"""
+
+
+TARGET_GONI = "#525152"
+EEG = "#e2e2e2"
+HIP = "#f34142"
+ANKLE = "#3aaf6a"
+KNEE = "#1e6fd9"
+
+JOINT_COLORS = {
+    "hip": HIP,
+    "kne": KNEE,
+    "knee": KNEE,
+    "ank": ANKLE,
+    "ankle": ANKLE,
+}
+
+IW = "#8C8C8C"
+RW = "#000000"
+REST = "#FFFFFF"
+REST_EDGE = "#9AA0A6"
+S2S = "#34405A"
+STATE_COLORS = {"IW": IW, "MI": IW, "RW": RW, "EXEC": RW, "REST": REST, "S2S": S2S}
+IW_HUE = "#2E6E5E"
+REST_HUE = "#BA7517"
+RW_HUE = "#1F1F1F"
+COND_FILL_ALPHA = 0.32
+IW_LIGHT = "#B2CBC2"
+REST_LIGHT = "#E9D3B5"
+RESPONDER_FACE, NON_RESPONDER_FACE = IW_HUE, IW_LIGHT
+
+WALKER_HUE = "#8C2F2F"
+WALKER_LIGHT = "#DFC3C3"
+HARMONIC_COLORS = ("#9C3FA6", "#E07FB0", "#7A86D9")
+PHASE_CMAP = "twilight"
+DIFF_CMAP = "RdBu_r"
+
+
+HEALTHY = "#4D4D4D"
+RESPONDER = "#00568A"
+NON_RESPONDER = "#C5D6E1"
+PATIENT_P1 = "#D3B8A2"
+PATIENT_P2 = "#E5E7CD"
+PATIENT = PATIENT_P1
+COHORT_COLORS = {"healthy": HEALTHY, "P1": PATIENT_P1, "P2": PATIENT_P2, "patient": PATIENT}
+
+INK, MID, PALE = "#1A1A1A", "#666666", "#B3B3B3"
+HARMONIC_SHADES = (INK, MID, PALE)
+NULL_FILL = "#D9D9D9"
+
+RDM_CMAP_STOPS = ("#8C7A64", "#FFFFFF", "#1F4E79")
+SEQ_CMAP = "Greys"

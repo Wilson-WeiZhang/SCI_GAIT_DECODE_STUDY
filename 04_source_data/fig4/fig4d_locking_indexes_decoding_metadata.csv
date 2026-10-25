@@ -1,0 +1,29 @@
+key,value
+panel,Fig. 4 panel c - locking strength |c| indexes decodability
+build_id,main
+cohort,healthy cohort (decoder tag main; |c| tag main); 80 sessions per condition
+locking_metric,mean |complex| over k1+k2+k3 x channels x cycle points (band-unselected)
+x_axis,"abs_c_rest_corrected = abs_c of the task minus abs_c of the same session's rest control (same metric); abs_c = uncorrected value, kept for the comparison with rest"
+library_versions,python 3.13.7; numpy 2.3.4; scipy 1.16.3; pandas 2.3.3; matplotlib 3.10.7
+r_convention,trial_median
+input_trial_median,04_source_data/fig4/fig4_trialmedian_source_data.csv
+input_trial_median_build_id,main
+r_convention_definition,per-session median over trials of the per-trial mean over the 6 joints (= Fig.2c 'All' median); source 04_source_data/fig4/fig4_trialmedian_source_data.csv
+cohort_median_of_session_r_IW,0.465586
+cohort_median_of_session_r_RW,0.883215
+xsess_heldout_rho_pooled_IW,+0.4872
+xsess_heldout_p_pooled_IW,8.078e-06
+xsess_heldout_n_subjects,38
+xsess_heldout_n_pairs,76
+xsess_heldout_method,"Spearman over (|c| session A, decode r session B), same subject, both directions; |c| and r come from different sessions "
+xsess_heldout_scope,"full-cohort healthy, imagined walking, pooled k1+k2+k3 rest-corrected |c|"
+panel_c_fit_by_state,"one OLS of decode r on |c| within each state (IW, RW), each drawn over that state's own |c| range; 95% CI band per state from a cluster bootstrap over the participants present in that state, 1000 draws, seed 20260901; curves in fig4d_locking_indexes_decoding_fit_by_state.csv"
+IW_spearman_rho,0.7058
+IW_spearman_p,2.65e-13
+RW_spearman_rho,0.7291
+RW_spearman_p,1.746e-14
+n_sessions_per_state,80
+IW_ols_slope,5.3237
+IW_ols_r2,0.4628
+RW_ols_slope,0.5709
+RW_ols_r2,0.4337

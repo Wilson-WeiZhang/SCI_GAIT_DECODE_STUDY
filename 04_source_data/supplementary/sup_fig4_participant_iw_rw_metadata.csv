@@ -1,0 +1,9 @@
+key,value
+panel,"main Fig. 4i (figures_out/fig4/main/fig4_participant_iw_rw.png, Source Data fig4_participant_iw_rw_*) - subject-level IW vs RW decoding accuracy"
+build_id,main
+build_id_note,"main, healthy cohort, 42 participants (session values averaged within participant)"
+input,fig4_decoding_gain_source_data.csv (not distributed) (fig4_decoding_gain.py)
+spearman_rho,0.3231
+spearman_p,0.0369
+n_participants,42
+band,"OLS line + 95% bootstrap band (1000 resamples, seed 0)"

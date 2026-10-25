@@ -1,0 +1,13 @@
+key,value
+file,sup_decoder_trial_r_source_data.csv
+rows,one per session x trial x joint (six joints)
+columns,"session, cohort, condition, fold, trial_idx, test_ordinal, joint, model (calib = the calibrated readout), r (held-out Pearson r of the final decoder output with the goniometer trace over the finite samples; empty = not computable, stored as NaN by the readout), rpt_r (= r), n_samples, first_finite_time_sec, scored"
+use,"every reported accuracy is computed from the scored rows; e.g. the headline convention (a trial's r = mean over its six joints, a session's value = median over its scored trials, then the median over sessions) gives healthy IW 0.465586, healthy RW 0.883215, post_operative IW 0.538915, pre_operative IW 0.359230"
+build_id,main
+script,03_figures/sup_decoder_trial_tables.py
+cv,"random 10-fold cross-validation within each session; every trial is decoded once, by the model of the fold that holds it out; the same fold map serves the random 10-fold runs of a condition (the contiguous-fold control has its own folds)"
+scored,"1 = trial recorded after the session's calibration recording (scoring mask, condition IW / RW, column keep); every trial, scored or not, trains the decoder"
+count_IW_healthy,"80 sessions, 4756 trials, scored 3172"
+count_RW_healthy,"80 sessions, 4739 trials, scored 3169"
+count_IW_post_operative,"11 sessions, 449 trials, scored 282"
+count_IW_pre_operative,"4 sessions, 154 trials, scored 77"

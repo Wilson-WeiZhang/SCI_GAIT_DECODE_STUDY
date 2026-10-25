@@ -1,0 +1,12 @@
+key,value
+file,sup_decoder_trial_predictions_example_source_data.csv
+session,subj27_sess01 (healthy imagined walking; the session of Fig. 2d/e)
+rows,"one per sample (250 Hz) of the 40 scored trials, 70528 rows"
+columns,"session, condition, trial_idx, fold, time_s (trial time, s), stage1_<joint> (first-stage output after its 6 Hz low-pass), final_<joint> (final output, the one scored); joints LHip, LKne, LAnk, RHip, RKne, RAnk; empty = not decoded"
+target,the goniometer target is not included (goniometer data are not released)
+check,"before writing, r(final output, goniometer target) over the finite samples, computed from the undistributed decoder output, equals trial_r to 1e-6 in 240 trial x joint cells"
+all_sessions,"the full set (healthy imagined and real walking, patients; about 11.7 million scored samples) is not distributed; `--predictions all --out <dir>` writes it from the decoder output"
+build_id,main
+script,03_figures/sup_decoder_trial_tables.py
+cv,"random 10-fold cross-validation within each session; every trial is decoded once, by the model of the fold that holds it out; the same fold map serves the random 10-fold runs of a condition (the contiguous-fold control has its own folds)"
+scored,"1 = trial recorded after the session's calibration recording (scoring mask, condition IW / RW, column keep); every trial, scored or not, trains the decoder"

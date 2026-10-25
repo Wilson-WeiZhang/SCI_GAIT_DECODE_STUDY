@@ -1,0 +1,25 @@
+key,value
+figure,Fig. 4 panel a - real-walking (EXEC) gait-cycle harmonic phase strip
+panel_letter,a
+build_id,main
+cohort, healthy cohort
+n_sessions,80
+exec_source,diag_real_walking_cohort
+chanlocs_source,SUB_37_sess02_step2.set
+n_channels_plotted,60
+unified_ref_phase_rad,-2.193821
+clim_abs,0.425373
+aggregation,session-equal complex average; |c| shown per harmonic is the mean magnitude of that complex average
+persession_source,diag_real_walking_persession
+sig_test,two-sided one-sample t across sessions that the signed locking (projection on unified_ref_phase_rad) != 0; per channel x cycle-point x harmonic
+sig_correction,"Benjamini-Hochberg FDR, alpha=0.05, within each harmonic row"
+sig_n_sessions,80
+sig_n_tests_per_harmonic,540
+sig_marker,"filled black dot, white edge - same convention as the Fig. 3 harmonic-phase maps"
+persession_vs_cohort_max_dev,6.945e-11
+n_sig_k1,330
+n_sig_k2,373
+n_sig_k3,342
+mean_abs_c_k1,0.136131
+mean_abs_c_k2,0.249180
+mean_abs_c_k3,0.109696

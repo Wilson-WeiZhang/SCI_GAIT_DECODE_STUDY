@@ -1,0 +1,39 @@
+key,value
+build_id,main
+cohort, healthy cohort
+paper_location,"Fig. 3 panel i - per-resample Spearman rho draws behind the 95% bootstrap CIs of the self-report forest (six items vs rest-corrected k1 locking, n = 76 sessions)"
+unit_of_analysis,session
+n_sessions_with_questionnaire,76
+statistic,Spearman rho of each self-report item vs excess_k1 (TASK-EVOKED k1 LOCKING)
+resampling,"session-level bootstrap with replacement, np.random.default_rng(0)"
+n_draws_in_file,1000
+n_draws_behind_published_CI,1000
+degenerate_draws,"resamples returning NaN rho (constant 0-1 item) are dropped, as in the renderer"
+column_order,top-to-bottom as plotted (descending rho)
+published_CI_source,04_source_data/fig3/fig3_h_forest_stats.csv (ci_lo/ci_hi)
+significance_rule,"BH-FDR q<0.05 across the 6 items, NOT the raw bootstrap CI"
+generator,03_figures/fig3_h_forest_bootstrap_draws.py
+Q6_avoid_label,volitional control
+Q6_avoid_finite_draws_of_1000,1000
+Q6_avoid_ci_published,"0.250156,0.639101"
+Q6_avoid_ci_exported1000,"0.250156,0.639101"
+Q5_relax_label,felt relaxed
+Q5_relax_finite_draws_of_1000,1000
+Q5_relax_ci_published,"-0.064379,0.399258"
+Q5_relax_ci_exported1000,"-0.064379,0.399258"
+Q3_still_label,stayed still (0-1)
+Q3_still_finite_draws_of_1000,955
+Q3_still_ci_published,"-0.088140,0.334387"
+Q3_still_ci_exported1000,"-0.088140,0.334387"
+Q1_intent_label,intent to move
+Q1_intent_finite_draws_of_1000,1000
+Q1_intent_ci_published,"-0.194458,0.277134"
+Q1_intent_ci_exported1000,"-0.194458,0.277134"
+Q4_pace_label,matched pace
+Q4_pace_finite_draws_of_1000,1000
+Q4_pace_ci_published,"-0.193877,0.257774"
+Q4_pace_ci_exported1000,"-0.193877,0.257774"
+Q2_sync_label,sync with walker
+Q2_sync_finite_draws_of_1000,1000
+Q2_sync_ci_published,"-0.241196,0.229513"
+Q2_sync_ci_exported1000,"-0.241196,0.229513"

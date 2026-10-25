@@ -1,0 +1,32 @@
+key,value
+build_id,main
+cohort,healthy cohort (80 sessions / 42 participants)
+cohort_authority,session_manifest.csv (not distributed) (export folder names) cross-checked against cohort_manifest_healthy.csv (not distributed) (status=include); both counts asserted at run time
+renderer,03_figures/sup_healthy_trial_inventory.py
+paper_location,"Supplementary Note 11, cohort-accounting paragraph: mean recording duration per session, and the real-walking / rest trial counts available beyond the 4,756 held-out imagined-walking trials"
+figure,none - numbers/table only
+input_trial_inventory,prep_healthy_cohort_trial_inventory.csv (not distributed)
+input_raw_duration,prep_healthy_cohort_raw_recording_duration.csv (not distributed)
+input_decode_iw,data/decoder_output/decoder_output_imagined_walking.csv
+input_decode_rw,data/decoder_output/decoder_output_real_walking.csv
+event_root_verification,"per-session qc-good counts equal the decoder's held-out trial counts in 80 of 80 sessions for both tasks (4756 imagined-walking, 4739 real-walking); asserted"
+event_sampling_rate_hz,250
+raw_recording_definition,"size(.eeg)/(NumberOfChannels x bytes_per_sample)/sampling_rate, summed over the sub-parts 04_export merged into the session. All 94 parts are 63 ch / 1000 Hz / IEEE_FLOAT_32 / BINARY / MULTIPLEXED"
+raw_recording_is_not_export_length,"prep_step2 trims the recording to the S11-S12 task block, so the exported _eeg.mat is systematically shorter than the raw recording; task_span_min is reported beside raw_recording_min as the analysed-span cross-check"
+col_row_type,"'session' = one analysed session; 'cohort' = a cohort-level summary metric, whose name is in `session`, unit in `subject`, value in `n_gi_events`"
+col_session,export folder name of the analysed session (session rows)
+col_subject,participant id from the prep cohort manifest (session rows)
+col_n_gi_qc_good,"of those, event.qc == 'good'"
+col_n_rw_events,"recorded real-walking trial events, event.code 'gaitexecution'"
+col_n_rw_qc_good,"of those, event.qc == 'good'"
+col_n_rest_events,"recorded rest trial events, event.code 'rest'"
+col_n_rest_qc_good,"of those, event.qc == 'good'"
+col_n_iw_heldout_decoded,"held-out imagined-walking trials that entered decoding = sum of n_trials over the unique (session, fold) pairs of the main MI merged CSV (rows are fold x joint); equals n_gi_qc_good in all 80 sessions"
+col_n_rw_heldout_decoded,"same, from the main real-walking (EXEC) merged CSV; equals n_rw_qc_good in all 80 sessions"
+col_task_span_min,(max etstop - min etstart) / 250 Hz / 60 = first trial onset to last trial offset of the exported session
+col_raw_recording_min,"summed raw BrainVision recording length of the merged raw parts, minutes"
+col_n_raw_parts,number of raw recordings merged into the analysed session
+protocol_design,"60 imagined walking + 60 real-walking + 30 rest trials per standard session (Supplementary Table 7, Healthy_protocol); actual per-session counts vary and are in the session rows"
+n_decode_folds_iw,800 (80 sessions x 10 folds)
+n_decode_folds_rw,800 (80 sessions x 10 folds)
+assertion_iw_heldout,total held-out imagined-walking trials == 4756  (asserted)

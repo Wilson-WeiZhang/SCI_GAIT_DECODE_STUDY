@@ -1,0 +1,8 @@
+key,value
+scope,healthy recorded sessions (83) and patient recorded sessions (18); trial counts are for retained sessions
+healthy_cohort,80 sessions / 42 participants
+patient_cohort,15 sessions / 2 participants (case-level)
+build_id,main
+build_id_note,Prep-side and DECODER-INDEPENDENT: every input is a prep (healthy) or prep_patient (patient) alignment / goniometer-QC / manifest artefact; no decode product is read.  Cohorts: the healthy cohort and the retained patient set pre_operative + post_operative.
+decision_column,input = count entering the stage; automatic = decided by a coded rule; manual = decided or corrected by a person; result = after both
+generator,sup_preprocessing_qc_summary.py

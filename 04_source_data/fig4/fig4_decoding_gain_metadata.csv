@@ -1,0 +1,16 @@
+key,value
+producer,03_figures/fig4_decoding_gain.py
+build_id,main
+cohort,healthy; 80 sessions / 42 participants
+input_iw,data/decoder_output/main/h_iw_session_summary.csv
+input_rw,data/decoder_output/main/h_rw_session_summary.csv
+r_convention,trial_median
+session_statistic,per-session median over trials of the per-trial mean over the six joints (= the Fig. 2c 'All' median)
+bracket_test,session_wilcoxon (p = 7.850e-15); the bracket quotes the test that matches the plotted statistic
+n_sessions,80
+n_subjects,42
+input_trial_median,04_source_data/fig4/fig4_trialmedian_source_data.csv
+figure,Fig. 4 panel b - RW vs IW decoding gain; THIS file carries the PER-PARTICIPANT IW / RW / gain values
+rows,one per participant
+n_rows,42
+outputs,figures_out/fig4/main/fig4_decoding_gain.png

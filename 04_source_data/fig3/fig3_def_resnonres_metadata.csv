@@ -1,0 +1,10 @@
+key,value
+definition,responder = MI |c|(k1) > own resting null 95th pct (200-resample); within-session one-sided p<0.05
+build_id,main
+fdr_definition,Benjamini-Hochberg at 0.05 over the sessions on the one-sided normal p of z
+n_nonresponder,25
+n_responder,55
+n_responder_fdr,55
+n_sessions,80
+z,"(MI |c| - rest_null_mean)/rest_null_sd; null ~N(0,1), cut at 1.645"
+z_range,-1.56 .. 16.48

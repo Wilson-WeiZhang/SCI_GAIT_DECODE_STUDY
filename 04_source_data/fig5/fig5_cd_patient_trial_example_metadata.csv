@@ -1,0 +1,22 @@
+key,value
+figure,"Fig.5 c (skeleton filmstrip, nine instants) and d (six joint-angle traces) - one held-out imagined-walking trial"
+build_id,main
+cohort,"not applicable - this is a SINGLE held-out trial, not a cohort statistic; the trial was selected from the patient 2 trials of cohort post_operative"
+decode_tag,main
+decoder,"strictly causal EEG preprocessing (minimum-phase anti-aliasing and 0.1-40 Hz band-pass; bad channels, ICA and ICLabel fitted on a calibration recording and applied forward), causal complex-demodulation features cdm_o1_c0p18_causal, harmonic band table estimated per fold from the training trials, shared PCA 30, causal 6 Hz low-pass on the first-stage output, random 10-fold cross-validation, Python readout 02_decoding/pyport; scored on the trials recorded after each session's calibration recording (03_figures/scoring_mask.csv)"
+basis,"all-80-healthy pooled shared PCA basis, 30 components, on the causal complex-demodulation features cdm_o1_c0p18_causal"
+readout,"patient-trained random 10-fold CV (representation transfer, not zero-shot)"
+trial,"pat02_sess06 (patient 2, post-operative session 3 of the 5 analysed), trial_idx 26 (random 10-fold CV, fold 3)"
+n_samples,792
+sampling_rate_hz,250
+snap_instants_s,"4.11,4.40,4.69,4.98,5.27,5.56,5.85,6.14,6.43"
+snap_instants_note,"t1-t9 as drawn; the CSV's instant rows carry the nearest sample, which is what both panels draw."
+amplitude_calibration,"decoded_calibrated = template_mean + (template_sd / decoded_sd) * (decoded - decoded_mean), per joint. Template = the gait-cycle average of the gain_fit_cohort trials (template_mean / template_sd = mean / SD of that 50-bin curve). Timing and shape are the decoder's own; only amplitude and offset are set by the template."
+amplitude_gains,"L hip 2.207, L knee 2.375, L ankle 2.064, R hip 2.122, R knee 2.101, R ankle 2.395 (range x2.06-2.39)"
+per_joint_r,"L hip 0.831, L knee 0.670, L ankle 0.400, R hip 0.767, R knee 0.841, R ankle 0.622; rounded to 2 dp for the legend this reads 0.83 / 0.67 / 0.40 (left) and 0.77 / 0.84 / 0.62 (right hip, knee, ankle)"
+r_definition,"trial-level Pearson r of C_pred against Y_true over the finite window. rpt_r is the per-trial r of the held-out trial (computed per trial in every CV scheme), so this equals the trial's rpt_r in result/main/pat_trial_r_long.csv (asserted to 1e-9 by this script). Amplitude calibration and the display sign are both per-channel linear, so neither moves r."
+display_sign,"S = [+1,-1,+1,-1,+1,-1] applied to all series in this CSV: undoes the mirrored right-side goniometer mounting and flips the knee, giving the clinical convention (hip flexion +, knee flexion +, ankle dorsiflexion +). Decoding runs on the RAW channels throughout; this is display only."
+panel_c_png,figures_out/fig5/main/fig5c_patient_trial_filmstrip.png
+panel_d_png,figures_out/fig5/main/fig5d_patient_trial_traces.png
+scope,"n=2 SCI patients, case-level, descriptive; this is ONE example trial and is NOT the best trial and NOT a cohort statistic. No population claim."
+output_csv,04_source_data/fig5/fig5_cd_patient_trial_example_source_data.csv

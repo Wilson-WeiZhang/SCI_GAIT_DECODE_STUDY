@@ -1,0 +1,53 @@
+key,value
+panel,"Fig. 4 panel e - per-session spin-calibrated spatial RSA (IW vs RW), k1/k2/k3"
+build_id,main
+n_sessions,80
+n_participants,42
+n_channels,60
+n_cycle_points,9
+n_spin,1000
+seed,0
+input_iw,data/decoder_output/diag_harmonic_phase_responder_split/persession_harmonic_phase_cycle9_complex.csv
+input_rw,data/decoder_output/diag_real_walking_persession/persession_harmonic_phase_cycle9_complex.csv
+session_rdm,"Euclidean distance between 18-value electrode feature vectors [re(phi_1..9), im(phi_1..9)]; upper triangle = 1770 pairs"
+spin_null,"one shared set of 1000 random-rotation electrode permutations (default_rng(0), rand_rot, linear_sum_assignment on standard_1005 xyz), applied to the RW RDM of every session and reused for all k"
+primary_test,cohort-mean spin test: P = (1 + #{mean_s rho_s^(r) >= mean_s rho_s}) / (N_SPIN + 1)
+secondary_test,two-sided Wilcoxon signed-rank of the per-session spin-z across sessions (and across participant means)
+multiplicity,BH-FDR and Holm across the three harmonics (statsmodels)
+k1_cohort_mean_rho_obs,0.13105
+k1_cohort_mean_null_mean,0.090903
+k1_P_spin,0.037962
+k1_P_spin_BH,0.056943
+k1_P_spin_Holm,0.075924
+k1_wilcoxon_z_P,8.879125e-04
+k1_wilcoxon_z_P_BH,1.331869e-03
+k1_frac_sessions_above_null95,0.1
+k1_participant_wilcoxon_P,2.214891e-03
+k1_participant_n,42
+k2_cohort_mean_rho_obs,0.212449
+k2_cohort_mean_null_mean,0.106573
+k2_P_spin,0.001998
+k2_P_spin_BH,0.005994
+k2_P_spin_Holm,0.005994
+k2_wilcoxon_z_P,3.535226e-12
+k2_wilcoxon_z_P_BH,1.060568e-11
+k2_frac_sessions_above_null95,0.275
+k2_participant_wilcoxon_P,8.708412e-09
+k2_participant_n,42
+k3_cohort_mean_rho_obs,0.113985
+k3_cohort_mean_null_mean,0.092902
+k3_P_spin,0.115884
+k3_P_spin_BH,0.115884
+k3_P_spin_Holm,0.115884
+k3_wilcoxon_z_P,4.707077e-02
+k3_wilcoxon_z_P_BH,4.707077e-02
+k3_frac_sessions_above_null95,0.1125
+k3_participant_wilcoxon_P,1.218498e-01
+k3_participant_n,42
+k1_cohortlevel_crossnobis_rho,0.0825
+k1_cohortlevel_crossnobis_spin_p,0.6384
+k2_cohortlevel_crossnobis_rho,0.6059
+k2_cohortlevel_crossnobis_spin_p,0.024
+k3_cohortlevel_crossnobis_rho,0.3612
+k3_cohortlevel_crossnobis_spin_p,0.1049
+cohortlevel_source,fig4b_rsa_per_harmonic_source_data.csv (not distributed) (crossnobis RDM cross-validated ACROSS sessions; ONE statistic per k) - copied here for comparison only

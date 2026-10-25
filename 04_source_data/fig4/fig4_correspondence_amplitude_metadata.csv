@@ -1,0 +1,14 @@
+key,value
+panel,Fig. 4f - per-session IW x RW correspondence amplitude A_k
+build_id,main
+build_id_note,healthy cohort
+n_sessions,80
+n_participants,42
+model,"M_k(i,j) = A_k cos(2 pi k (phi_i - phi_j) - Delta_k) + b_k, OLS over 64 cells; the SAME fit whose Delta_k is the phase-delay panel"
+input,fig4_phase_delay_persession_source_data.csv
+k1_median_IQR,"0.2476 [0.1940, 0.3535]"
+k2_median_IQR,"0.3505 [0.2476, 0.4635]"
+k3_median_IQR,"0.2451 [0.1376, 0.3510]"
+k1_vs_k2_wilcoxon,"P = 0.000113, BH q = 0.000169 (***)"
+k3_vs_k2_wilcoxon,"P = 4.12e-05, BH q = 0.000124 (***)"
+multiplicity,"BH-FDR, family of 3, matching every other marked panel in Fig. 4"

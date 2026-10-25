@@ -1,0 +1,21 @@
+key,value
+figure,Fig.5 patient per-session / per-trial decoding r (patient analogue of Fig.2g)
+build_id,main
+decode_tag,main
+basis,all-80-healthy pooled shared PCA30 on causal complex-demodulation features (basis_hglobal_cdm_pca30)
+readout,"patient-trained random 10-fold CV (representation transfer, not zero-shot)"
+scope,"n=2 SCI patients, case-level, descriptive; no population claim"
+metric,"rpt_r, model=calib; joint groups Hip/Knee/Ankle = L,R mean; All = mean of the 6 Walker-X joints with a finite r (in pat01_sess05 and pat01_sess08 the walker LKneW X channel has no finite r in any trial, so there Knee = RKneW X and All is the mean of the other five joints)"
+source,data/decoder_output/main/pat_trial_r_long.csv
+source_fold_level,data/decoder_output/main/pat_session_summary.csv
+n_trials,359
+n_sessions,15
+n_patients,2
+pre_operative_set,pat01 sess01/02 + pat02 sess01/02 (4 sessions)
+column_order,"P1 pre -> P1 post -> P2 pre -> P2 post, by session number within each block (fixed; NOT ranked by performance, unlike Fig.2g)"
+fold_level_post_operative_mean_rpt_calib,0.459923
+fold_level_pre_operative_mean_rpt_calib,0.304632
+trial_level_post_operative_mean_All,0.460553
+trial_level_pre_operative_mean_All,0.296952
+summary_statistic,"median with IQR (q25/q75) as in Fig.2g; mean and sd also given"
+outputs,"fig5g_trial_r_long.csv; fig5g_session_summary.csv; fig5g_trial_r_matrix_{Hip,Knee,Ankle,All}.csv; fig5g_metadata.csv"

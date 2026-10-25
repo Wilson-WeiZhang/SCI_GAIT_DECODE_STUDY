@@ -1,0 +1,20 @@
+key,value
+figure,Fig. 4 input - paired IW vs RW decoding accuracy over sessions, session-mean convention (Fig. 4b plots the trial-median convention, fig4_trialmedian_metadata.csv)
+claim,Fixed linear decoder reconstructs joint angles ~2x better in real than imagined walking
+cohort_version,"main / healthy cohort /  causal prep (01_preprocessing/causal/healthy/: minimum-phase anti-aliasing and 0.1-40 Hz band-pass, bad channels / ICA / ICLabel from a calibration recording applied forward)"
+build_id,main
+build_id_note,main
+decoder,"strictly causal EEG preprocessing (minimum-phase anti-aliasing and 0.1-40 Hz band-pass; bad channels, ICA and ICLabel fitted on a calibration recording and applied forward), causal complex-demodulation features cdm_o1_c0p18_causal, harmonic band table estimated per fold from the training trials, shared PCA 30, causal 6 Hz low-pass on the first-stage output, random 10-fold cross-validation, Python readout 02_decoding/pyport; scored on the trials recorded after each session's calibration recording (03_figures/scoring_mask.csv))"
+n_sessions,80
+n_subjects,42
+metric,"rpt_calib (calibrated per-trial reconstruction r), session = mean of finite folds"
+weighting,session-equal
+iw_session_mean,0.4037
+rw_session_mean,0.8318
+sessions_rw_gt_iw,80/80
+paired_t_session,"t=21.2526, P=2.049e-34"
+subjects_rw_gt_iw,42/42
+paired_t_subject,"t=17.3119, P=1.852e-20"
+iw_source,h_iw_session_summary.csv
+rw_source,h_rw_session_summary.csv
+scope,full-cohort healthy

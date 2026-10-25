@@ -1,0 +1,21 @@
+key,value
+producer,03_figures/fig4b_rsa_per_harmonic_k123.py
+build_id,main
+build_id_note,healthy cohort
+cohort,healthy; IW 80 / RW 80 / REST 80 sessions
+input_iw,data/decoder_output/diag_harmonic_phase_responder_split/persession_harmonic_phase_cycle9_complex.csv
+input_rw,data/decoder_output/diag_real_walking_persession/persession_harmonic_phase_cycle9_complex.csv
+input_rest,data/decoder_output/diag_rest_yoked/persession_harmonic_phase_cycle9_complex.csv
+n_sessions_iw,80
+n_sessions_rw,80
+n_sessions_rest,80
+n_channels_common,60
+n_cycle_points,9
+n_harmonics,3
+n_spin,1000
+spin_rng_seed,0
+figure,"Supplementary Note 5, text only (cohort-level spin RSA; the per-session spin RSA of Fig. 4e is 03_figures/fig4_rsa_persession_spin.py) - 2nd-order spatial RSA per harmonic k1/k2/k3, spin-tested, plus the temporal RSA numbers"
+rows,one per harmonic k
+n_rows,3
+method_spatial,"electrode RDM (crossnobis), 2nd-order Spearman IW-vs-RW, spin-test spatial null, IW-REST control"
+method_temporal,"gait-phase RDM 2nd-order IW-vs-RW, raw and narrowband-removed (partial on sin^2(2*pi*dphi)), plus REST"

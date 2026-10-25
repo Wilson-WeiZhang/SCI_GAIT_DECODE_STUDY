@@ -1,0 +1,26 @@
+key,value
+figure,"Fig. 7 panel f — fraction of instructed rest events whose gate has CLOSED by t seconds after rest onset, drawn as a grouped bar chart: five checkpoints (3, 4, 5, 7, 9 s) x two bars per checkpoint (Patient 1 then Patient 2). One panel PNG + one separate legend PNG. No in-figure title, no in-figure statistics; a whole-percent value label over every bar."
+panel_letter,f
+build_id,main
+gate_set,"post_operative (11 sessions: pat01_sess04, pat01_sess05, pat01_sess06, pat01_sess07, pat01_sess08, pat01_sess09, pat02_sess03, pat02_sess05, pat02_sess06, pat02_sess08, pat02_sess09)"
+window_s,3
+karcher_solver,"checked (step-halving fixed point, tol 1e-10, itmax 20000)."
+cohort,"n = 2 patients, case-level."
+definition_denominator,"The denominator of every bar is ALL rest events of that patient (not only the ones that close), so the never-closed events are the visible gap between the 9 s bar and 1."
+n_rest_events_total,278 (both patients pooled; 16 never close = 5.8 %)
+pat01_n,144
+pat01_closed_by_3s,0.9097
+pat01_closed_by_4s,0.9306
+pat01_closed_by_5s,0.9444
+pat01_closed_by_7s,0.9514
+pat01_closed_by_9s,0.9514
+pat01_never_closed,0.0486
+pat02_n,134
+pat02_closed_by_3s,0.6194
+pat02_closed_by_4s,0.7612
+pat02_closed_by_5s,0.8881
+pat02_closed_by_7s,0.9328
+pat02_closed_by_9s,0.9328
+pat02_never_closed,0.0672
+bars_source_data,"04_source_data/fig7/fig7_gate_close_latency_bars_source_data.csv — the PLOTTED values of this panel, 10 rows (2 patients x 5 checkpoints), columns patient,t_s,n_rest_events,n_closed,fraction_closed. The event-level fig7_gate_close_latency_source_data.csv is the per-event record the bars are aggregated from."
+producer,03_figures/fig7_gate_close_latency.py

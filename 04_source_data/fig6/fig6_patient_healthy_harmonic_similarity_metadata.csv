@@ -1,0 +1,20 @@
+key,value
+figure,"Fig. 6 supporting analysis - patient<->healthy harmonic phase-map similarity (group bars = post_operative); NOT one of the lettered panels a-h, the plotted panel c/d counterparts are fig6_cross_harmonic_specificity and fig6_patient_in_healthy_similarity"
+build_id,main
+patient_dump,diag_patient_harmonic_phase
+healthy_dump,diag_harmonic_phase_responder_split
+scope,"n=2 SCI patients, case-level, descriptive; 11 post-operative sessions vs n=80 healthy sessions (healthy cohort, 42 participants)"
+metric,"|complex spatial coherence| over channels x 9 cycle points, per harmonic; invariant to the arbitrary global reference phase"
+group_map_definition,patient group map = complex mean over the 11 post_operative sessions ONLY; healthy group map = complex mean over all 80 sessions
+post_operative_set,pat01 sess04-09 + pat02 sess03/05/06/08/09 (11 sessions) - group map + drawn bars
+pre_operative_set,"pat01 sess01/02 + pat02 sess01/02 (4 sessions) - per-session Source Data rows ONLY, cohort='pre_operative', DESCRIPTIVE; excluded from the group map and not drawn"
+n_common_channels,60
+n_cycle_points,9
+n_patient_sessions_group,11
+n_healthy_sessions,80
+bar_colour_rule,"blue #0072B2 = group similarity above the channel-shuffle null 95th percentile; grey #9aa0a6 = not. "
+group_similarity_k1,0.600343
+group_similarity_k2,0.850999
+group_similarity_k3,0.532887
+claim,"channel-space diagnostic, not source localization: patient gait-cycle harmonic topography matches healthy above a channel-shuffle null, strongest at the step harmonic k2; case-level, no population claim"
+output_png,figures_out/fig6/fig6_patient_healthy_harmonic_similarity.png

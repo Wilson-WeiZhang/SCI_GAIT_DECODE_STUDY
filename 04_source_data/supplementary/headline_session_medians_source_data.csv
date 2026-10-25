@@ -1,0 +1,4 @@
+cohort,input,joints,median_of_session_medians
+healthy,imagined_walking,All,0.465586
+healthy,real_walking,All,0.883215
+patient_post_operative,imagined_walking,All,0.538915
